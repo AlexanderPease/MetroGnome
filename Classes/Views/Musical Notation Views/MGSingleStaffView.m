@@ -11,12 +11,14 @@
 #import "MGNote.h"
 
 @interface MGSingleStaffView (Private)
--(int)totalPositions; /** Returns total number of visual "positions" in measure */
+-(CGFloat)getPosition:(int)position; //The x-axis position
+-(CGFloat)getPitchPosition:(int)position; //The pitch (y) position
 @end
 
 @implementation MGSingleStaffView
 @synthesize timeSignature = _timeSignature;
 @synthesize noteArray = _noteArray;
+@synthesize totalPositions = _totalPositions;
 
 -(void)dealloc {
     [super dealloc];
@@ -61,34 +63,48 @@
 -(void)displayRegular {
     for (int i = 0; i < [self.noteArray count]; i++) {
         MGNote *note = [self.noteArray objectAtIndex:i];
-        CGFloat yPosition = [self pitchPosition:note.pitchClass];
-        [note displayAtPosition:CGPointMake(i*10,yPosition)];
+        //CGPoint position = [self pitchPosition:note.pitchClass];
+        //[note displayAtPosition:CGPointMake(i*10,yPosition)];
         [self addSubview:note.image];        
     }
 }
 
+/** Return CGPoint for position of given pitch value in this 
+ SingleStaffView */
+-(CGPoint)getPosition:(int)position forPitch:(int)pitch {
+    CGFloat xPosition = [self getPosition:position];
+    CGFloat yPosition = [self getPitchPosition:pitch];
+    return CGPointMake(xPosition, yPosition);
+}
+
 
 /************************************************************************/
-/**
- -(int)totalPositions {
- return 0;
- }*/
 
--(CGFloat)pitchPosition:(int)pitch {
-    if (pitch == PITCH_CLASS_A) {return 0;}
-    else if (pitch == PITCH_CLASS_A) {return 10;}
-    else if (pitch == PITCH_CLASS_Asharp) {return 20;}
-    else if (pitch == PITCH_CLASS_B) {return 30;}
-    else if (pitch == PITCH_CLASS_C) {return 40;}
-    else if (pitch == PITCH_CLASS_Csharp) {return 50;}
-    else if (pitch == PITCH_CLASS_D) {return 60;}
-    else if (pitch == PITCH_CLASS_Dsharp) {return 70;}
-    else if (pitch == PITCH_CLASS_E) {return 80;}
-    else if (pitch == PITCH_CLASS_F) {return 90;}
-    else if (pitch == PITCH_CLASS_Fsharp) {return 100;}
-    else if (pitch == PITCH_CLASS_G) {return 110;}
-    else if (pitch == PITCH_CLASS_Gsharp) {return 120;}
-    else {NSLog(@"MGSingleStaffView:error");}
+
+-(CGFloat)getPosition:(int)position {
+    CGFloat totalWidth = self.frame.size.width;
+    return 0;
+}
+
+-(CGFloat)getPitchPosition:(int)position {
+    CGRect rect = [self frame];
+    CGFloat height = rect.size.height;
+    CGFloat dist = height / 9;
+    CGFloat nudge = height / 19;
+    //Positions are from G4-F5
+    if (position == PITCH_CLASS_A) {return dist*5+nudge;}
+    //else if (position == PITCH_CLASS_Asharp) {return dist*5+nudge;}
+    else if (position == PITCH_CLASS_B) {return dist*4+nudge;}
+    else if (position == PITCH_CLASS_C) {return dist*3+nudge;}
+    //else if (position == PITCH_CLASS_Csharp) {return dist*3+nudge;}
+    else if (position == PITCH_CLASS_D) {return dist*2+nudge;}
+    //else if (position == PITCH_CLASS_Dsharp) {return dist*2+nudge;}
+    else if (position == PITCH_CLASS_E) {return dist*1+nudge;}
+    else if (position == PITCH_CLASS_F) {return dist*0+nudge;}
+    //else if (position == PITCH_CLASS_Fsharp) {return dist*0+nudge;}
+    else if (position == PITCH_CLASS_G) {return dist*6+nudge;}
+    //else if (position == PITCH_CLASS_Gsharp) {return dist*6+nudge;}
+    else {NSLog(@"MGSingleStaffView:error"); return 0;}
 }
 
 

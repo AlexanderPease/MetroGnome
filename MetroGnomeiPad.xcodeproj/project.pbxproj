@@ -15,6 +15,7 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		C9551E86149EFE7600836A6D /* MGSheetMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9551E85149EFE7600836A6D /* MGSheetMusicView.m */; };
 		C9551E8A149F01F300836A6D /* MGSheetMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9551E89149F01F300836A6D /* MGSheetMusicViewController.m */; };
+		C9585C1814D8FA6000DB72FE /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = C9585C1714D8FA6000DB72FE /* red.png */; };
 		C968C8DA14932103005C1FD1 /* MGSoundFont.m in Sources */ = {isa = PBXBuildFile; fileRef = C968C8D914932103005C1FD1 /* MGSoundFont.m */; };
 		C98771E214CC8C9300649C26 /* MGSingleStaffView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98771E114CC8C9300649C26 /* MGSingleStaffView.m */; };
 		C98771E514CC8EF900649C26 /* SingleStaff.png in Resources */ = {isa = PBXBuildFile; fileRef = C98771E414CC8EF900649C26 /* SingleStaff.png */; };
@@ -73,6 +74,7 @@
 		C9551E85149EFE7600836A6D /* MGSheetMusicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGSheetMusicView.m; path = Views/MGSheetMusicView.m; sourceTree = "<group>"; };
 		C9551E88149F01F300836A6D /* MGSheetMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGSheetMusicViewController.h; path = Controllers/MGSheetMusicViewController.h; sourceTree = "<group>"; };
 		C9551E89149F01F300836A6D /* MGSheetMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGSheetMusicViewController.m; path = Controllers/MGSheetMusicViewController.m; sourceTree = "<group>"; };
+		C9585C1714D8FA6000DB72FE /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red.png; path = Resources/red.png; sourceTree = "<group>"; };
 		C968C8D914932103005C1FD1 /* MGSoundFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGSoundFont.m; path = Models/SoundFonts/MGSoundFont.m; sourceTree = "<group>"; };
 		C96AFECE14D4FC46001B9F71 /* Options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Options.h; path = Vaidyanathan/Options.h; sourceTree = "<group>"; };
 		C98771E014CC8C9300649C26 /* MGSingleStaffView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGSingleStaffView.h; path = "Views/Musical Notation Views/MGSingleStaffView.h"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C9585C1714D8FA6000DB72FE /* red.png */,
 				C9A1BA8814D7B74A00FF5E5A /* EighthNote.png */,
 				C9A1BA8914D7B74A00FF5E5A /* EndBarLine.png */,
 				C9A1BA8A14D7B74A00FF5E5A /* Flat.png */,
@@ -512,6 +515,7 @@
 				C9A1BA9714D7B74A00FF5E5A /* SixteenthNote.png in Resources */,
 				C9A1BA9814D7B74A00FF5E5A /* TrebleClef.png in Resources */,
 				C9A1BA9914D7B74A00FF5E5A /* WholeNote.png in Resources */,
+				C9585C1814D8FA6000DB72FE /* red.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

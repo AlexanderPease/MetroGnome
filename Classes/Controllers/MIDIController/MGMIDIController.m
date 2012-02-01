@@ -273,12 +273,13 @@
     // Test a single staff view
     MGSingleStaffView *staff = [[MGSingleStaffView alloc]initWithFrame:CGRectMake(100, 100, 300, 300)];
     [self.view addSubview:staff]; 
+    CGRect frame = staff.frame;
     
     MGPart *part = [score.partsArray objectAtIndex:0];
     MGNote *note = [part.notesArray objectAtIndex:0];
     //[note initImageWithValue:Quarter];
-    note.image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"QuarterNote.png"]];
-    //note.image.frame = CGRectMake(100,100,100,100);
+    note.image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"red.png"]];
+    note.image.center = [staff getPosition:0 forPitch:PITCH_CLASS_A];
     [staff addSubview:note.image];
     
     //UIImageView *test = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"QuarterNote.png"]];

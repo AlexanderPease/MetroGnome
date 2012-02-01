@@ -21,6 +21,7 @@
 @synthesize startTime       = _startTime;
 @synthesize velocity        = _velocity;
 @synthesize measureNumber   = _measureNumber;
+@synthesize position        = _position;
 @synthesize image           = _image;
 @synthesize imageCenter     = _imagecenter;
 

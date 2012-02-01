@@ -17,6 +17,8 @@
     NSInteger   _octave;
     NSInteger   _duration; /** in pulses (I think) */
     NSInteger   _startTime;
+    NSInteger   _measureNumber; /** The measure number in the score */
+    NSInteger   _position; /** The x position in the measure */
     UIImageView *_image;   /** Appropriate image for note value */
     CGPoint     *_imageCenter;
     
@@ -27,7 +29,7 @@
     u_char  eventFlag;     /** NoteOn, NoteOff, etc.  Full list is in class MidiFile */
     //Needs a channel 
     
-    NSInteger   _measureNumber; /** The measure number in the score */
+
     
     NSInteger   _velocity; /** The volume of the note */   
     
@@ -54,6 +56,7 @@
 @property(nonatomic,assign) NSInteger   startTime;
 @property(nonatomic,assign) NSInteger   velocity;
 @property(nonatomic,assign) NSInteger   measureNumber;
+@property(nonatomic,assign) NSInteger   position;
 @property(nonatomic,retain) UIImageView *image;
 @property(nonatomic,assign) CGPoint     imageCenter;
 

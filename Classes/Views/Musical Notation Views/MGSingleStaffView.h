@@ -13,10 +13,11 @@
 @interface MGSingleStaffView : UIImageView {
     MGTimeSignature *_timeSignature; //Only used if first measure in a line
     NSMutableArray *_noteArray;
-    //barlines? other images?
+    NSInteger totalPositions; //
 }
 @property(nonatomic,retain) MGTimeSignature *timeSignature;
 @property(nonatomic,retain) NSMutableArray *noteArray;
+@property(nonatomic,assign) NSInteger totalPositions;
 
 -(id)init; /** Does not take in a frame. For initing instance without knowing layout */
 -(id)initWithFrame:(CGRect)frame;
@@ -27,6 +28,6 @@
 
 /** Return CGPoint for position of given pitch value in this 
  SingleStaffView */
--(CGFloat)pitchPosition:(int)pitch; 
+-(CGPoint)getPosition:(int)position forPitch:(int)pitch;
 
 @end
