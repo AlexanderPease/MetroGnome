@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/Views/MGSheetMusicView.h"
-         timestampString = "349591857.132195"
+         timestampString = "350033707.842025"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "40"
-         endingLineNumber = "40">
+         startingLineNumber = "43"
+         endingLineNumber = "43">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

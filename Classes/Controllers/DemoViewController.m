@@ -10,12 +10,59 @@
 #import "bass.h"
 #import "bassmidi.h"
 #import "MGInstrument.h"
-#import "MGSheetMusicView.h"
+
 
 
 @implementation MGDemoViewController
+@synthesize sheet = _sheet;
+@synthesize label = _label;
+@synthesize logo = _logo;
+@synthesize progress = _progress;
 
+-(void)nextScreen {
+    if (self.progress == 0) {
+        self.progress++;
+        [self explain];
+    }
+    else if (self.progress == 1) {
+        self.progress++;
+        [self play];
+    }
+}
 -(void)go {
+    //start over
+    self.progress = 0;
+    
+    //View. self.sheet acts as button
+    CGSize screenSize = [UIScreen mainScreen].currentMode.size;
+    self.view = [[UIView alloc]initWithFrame:CGRectMake(0,0,screenSize.height,screenSize.width)];
+    self.sheet = [[MGSheetMusicView alloc]initWithFrame:CGRectMake(0,0,screenSize.height,screenSize.width)];
+    [self.view addSubview:self.sheet];
+    
+    self.logo = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"TrebleClefLogoBold.png"]];
+    CGFloat heightOffset = 200.0;
+    self.logo.center = CGPointMake(self.sheet.frame.size.width/2,self.sheet.frame.size.height/2 - heightOffset);
+    self.sheet.demo = self;
+    [self.sheet addSubview:self.logo];
+    
+    CGSize textSize = CGSizeMake(850.0, 200.0);
+    self.label = [[UILabel alloc]initWithFrame:CGRectMake(0,0, 
+                                                          textSize.width, textSize.height)]; 
+    self.label.center = CGPointMake(self.sheet.frame.size.width/2, self.sheet.frame.size.height/2);
+    self.label.numberOfLines = 4;
+    self.label.text = [NSString stringWithFormat:@"Welcome to the 2012 Kairos Global Summit!\n"
+                  "We have designed a short musical lesson for you to try.\n\n"
+                  "Please touch the screen to continue."];
+    self.label.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0]; //Clear background
+    [self.label setFont:[UIFont fontWithName:@"Arial" size:32.0]];
+    [self.sheet addSubview:self.label];
+}
+
+-(void)explain {
+    int i = 0;
+}
+
+-(void)play {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Z Kairos Blues" ofType:@"mid"];  
     HSTREAM stream=BASS_MIDI_StreamCreateFile(FALSE, [filePath UTF8String], 0, 0, 0, 44100);
     if (BASS_ErrorGetCode()) {
@@ -29,32 +76,6 @@
     [testInstrument release];
     
     BASS_MIDI_StreamSetFonts(stream, streamFont, 1); // apply it to the stream
-    
-    //Views
-    CGSize screenSize = [UIScreen mainScreen].currentMode.size;
-    self.view = [[UIView alloc]initWithFrame:CGRectMake(0,0,screenSize.height,screenSize.width)];
-    MGSheetMusicView *sheet = [[MGSheetMusicView alloc]initWithFrame:CGRectMake(0,0,screenSize.height,screenSize.width)];
-    [self.view addSubview:sheet];
-    
-    UIImageView *logo = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"TrebleClefLogoBold.png"]];
-    CGFloat heightOffset = 200.0;
-    logo.center = CGPointMake(sheet.frame.size.width/2,sheet.frame.size.height/2 - heightOffset);
-    [sheet addSubview:logo];
-    
-    CGSize textSize = CGSizeMake(850.0, 200.0);
-    UITextView *intro = [[UITextView alloc]initWithFrame:CGRectMake(0,0, 
-                                                                    textSize.width, textSize.height)]; 
-    intro.center = CGPointMake(sheet.frame.size.width/2, sheet.frame.size.height/2);
-    intro.text = [NSString stringWithFormat:@"Welcome to the 2012 Kairos Global Summit!\n"
-                  "We have designed a short musical lesson for you to try.\n\n"
-                  "Please touch the screen to continue."];
-    intro.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0]; //Clear background
-    [intro setFont:[UIFont fontWithName:@"Arial" size:32.0]];
-    [sheet addSubview:intro];
-    
-    
-    
-    //PLay midi file
     BASS_ChannelPlay(stream, FALSE);
 }
 

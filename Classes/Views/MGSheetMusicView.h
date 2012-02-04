@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "MGScore.h"
 #import "MGOptions.h"
+#import "DemoViewController.h"
 
 @interface MGSheetMusicView : UIView {
     MGScore *_score;
     NSMutableArray *_staves; //array of staves held by the MGSheetMusicView
+    MGDemoViewController *_demo;
 }
 @property(nonatomic,retain) MGScore *score;
 @property(nonatomic,retain) NSMutableArray *staves;
+@property(nonatomic,retain) MGDemoViewController *demo;
 
 
 /** Displays sheet music with parameters defined in options */

@@ -7,8 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+//#import "MGSheetMusicView.h"
 
-@interface MGDemoViewController : UIViewController
+@class MGSheetMusicView;
+
+@interface MGDemoViewController : UIViewController {
+    MGSheetMusicView *_sheet;
+    UILabel *_label;
+    UIImageView *_logo;
+    int _progress;
+}
+@property(nonatomic,retain)MGSheetMusicView *sheet;
+@property(nonatomic,retain)UILabel *label;
+@property(nonatomic,retain)UIImageView *logo;
+@property(readwrite,assign)int progress;
 
 -(void)go; //Starts demo
+-(void)explain;
+-(void)play;
 @end

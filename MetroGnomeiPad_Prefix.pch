@@ -8,3 +8,4 @@
 #endif
 
 #import "MIDIValues.h"
+#import "MGSheetMusicView.h"

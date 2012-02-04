@@ -12,6 +12,8 @@
 #import "MGBarLineView.h"
 #import "MGTimeSignature.h"
 
+#import "DemoViewController.h"
+
 #define STAFFHEIGHT 256
 //Amount of space between staves and edge of frame
 #define STAFFBORDERX 20
@@ -20,6 +22,12 @@
 @implementation MGSheetMusicView
 @synthesize score   = _score;
 @synthesize staves  = _staves;
+@synthesize demo    = _demo;
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    //id responder = [self nextResponder];
+    [self.demo nextScreen];
+}
 
 -(void)dealloc {
     [super dealloc];
@@ -30,6 +38,7 @@
         self.autoresizesSubviews = YES;
         self.backgroundColor = [UIColor colorWithPatternImage:
                                 [UIImage imageNamed:@"Sibelius Paper.png"]];
+        self.userInteractionEnabled = YES;
     }
     return self;
 }
