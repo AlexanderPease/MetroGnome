@@ -12,13 +12,15 @@
 
 @interface MGSingleStaffView (Private)
 -(CGFloat)getPosition:(int)position; //The x-axis position
--(CGFloat)getPitchPosition:(int)position; //The pitch (y) position
+-(CGFloat)getPositionForPitch:(int)position
+                    andOctave:(int)octave; //The pitch (y) position
 @end
 
 @implementation MGSingleStaffView
 @synthesize timeSignature = _timeSignature;
 @synthesize noteArray = _noteArray;
 @synthesize totalPositions = _totalPositions;
+@synthesize clef = _clef;
 
 -(void)dealloc {
     [super dealloc];
@@ -54,7 +56,10 @@
 
 
 -(void)displayTimeSignature {
-    [self.timeSignature initView];
+    if (self.timeSignature == NULL) {
+        NSLog(@"MGSingleStaffView: no time signature to display");
+        return;
+    }
     self.timeSignature.view.center = CGPointMake(0.0, self.center.y);
     [self addSubview:self.timeSignature.view];
 }
@@ -71,39 +76,78 @@
 
 /** Return CGPoint for position of given pitch value in this 
  SingleStaffView */
--(CGPoint)getPosition:(int)position forPitch:(int)pitch {
+-(CGPoint)getPosition:(int)position 
+             forPitch:(int)pitch 
+            andOctave:(int)octave {
     CGFloat xPosition = [self getPosition:position];
-    CGFloat yPosition = [self getPitchPosition:pitch];
+    CGFloat yPosition = [self getPositionForPitch:pitch 
+                                        andOctave:octave];
     return CGPointMake(xPosition, yPosition);
 }
 
 
 /************************************************************************/
 
-
+/** Returns CGFloat of x axis for position */
 -(CGFloat)getPosition:(int)position {
     CGFloat totalWidth = self.frame.size.width;
-    return 0;
+    CGFloat nudge = 40;
+    if (self.totalPositions == 0 || self.totalPositions < 0) {
+        self.totalPositions = [self.noteArray count];
+        if (self.totalPositions == 0) {
+            return position * 100 + nudge; //Worst case
+        }
+    }
+    CGFloat positionWidth = totalWidth / self.totalPositions;
+    return positionWidth * position + nudge;
 }
 
--(CGFloat)getPitchPosition:(int)position {
+/**!!!!!!!Needs to support bass/ clef !!!!*/
+/**!!!!!!!Harcode common values !!!!*/
+/**!!!!!!!Add in extra staff lines if off the page */
+/**Take in sharps/flats, ie. support both F and Esharp */
+
+
+/** Returns CGFloat of y axis for pitch position on staff */
+-(CGFloat)getPositionForPitch:(int)pitch andOctave:(int)octave {
     CGRect rect = [self frame];
     CGFloat height = rect.size.height;
     CGFloat dist = height / 9;
-    CGFloat nudge = height / 19;
-    //Positions are from G4-F5
-    if (position == PITCH_CLASS_A) {return dist*5+nudge;}
-    //else if (position == PITCH_CLASS_Asharp) {return dist*5+nudge;}
-    else if (position == PITCH_CLASS_B) {return dist*4+nudge;}
-    else if (position == PITCH_CLASS_C) {return dist*3+nudge;}
-    //else if (position == PITCH_CLASS_Csharp) {return dist*3+nudge;}
-    else if (position == PITCH_CLASS_D) {return dist*2+nudge;}
-    //else if (position == PITCH_CLASS_Dsharp) {return dist*2+nudge;}
-    else if (position == PITCH_CLASS_E) {return dist*1+nudge;}
-    else if (position == PITCH_CLASS_F) {return dist*0+nudge;}
+    CGFloat nudge = height / 20;
+    //Positions are based on G4-F5 +/- octaves
     //else if (position == PITCH_CLASS_Fsharp) {return dist*0+nudge;}
-    else if (position == PITCH_CLASS_G) {return dist*6+nudge;}
+    if (pitch == PITCH_CLASS_G) {
+        CGFloat pitchPosition = dist*6+nudge;
+        return pitchPosition - (octave-4)*(dist*8);
+    }
     //else if (position == PITCH_CLASS_Gsharp) {return dist*6+nudge;}
+    else if (pitch == PITCH_CLASS_A) {
+        CGFloat pitchPosition = dist*5+nudge;
+        return pitchPosition - (octave-4)*(dist*8);
+    }
+    //else if (position == PITCH_CLASS_Asharp) {return dist*5+nudge;}
+    else if (pitch == PITCH_CLASS_B) {
+        CGFloat pitchPosition = dist*4+nudge;
+        return pitchPosition - (octave-4)*(dist*8);
+    }
+    else if (pitch == PITCH_CLASS_C) {
+        CGFloat pitchPosition = dist*3+nudge;
+        return pitchPosition - (octave-5)*(dist*8);
+    }
+    //else if (position == PITCH_CLASS_Csharp) {return dist*3+nudge;}
+    else if (pitch == PITCH_CLASS_D) {
+        CGFloat pitchPosition = dist*2+nudge;
+        return pitchPosition - (octave-5)*(dist*8);
+    }
+    //else if (position == PITCH_CLASS_Dsharp) {return dist*2+nudge;}
+    else if (pitch == PITCH_CLASS_E) {
+        CGFloat pitchPosition = dist*1+nudge;
+        return pitchPosition - (octave-5)*(dist*8);
+    }
+    else if (pitch == PITCH_CLASS_F) {
+        CGFloat pitchPosition = dist*0+nudge;
+        return pitchPosition - (octave-5)*(dist*8);
+    }
     else {NSLog(@"MGSingleStaffView:error"); return 0;}
 }
 

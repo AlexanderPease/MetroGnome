@@ -32,7 +32,6 @@ typedef enum {
 /** Initialization methods */
 -(void)dealloc;
 -(id)initWithNumerator:(int)num andDenominator:(int)d andQuarter:(int)q andTempo:(int)t;
--(void)initView; //Init UIImageView property view
 
 /** Instance Methods */
 -(int)getMeasureForTime:(int)time;

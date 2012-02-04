@@ -14,7 +14,7 @@
 
 @interface MGNote : NSObject {
     NSInteger   _pitchClass;
-    NSInteger   _octave;
+    NSInteger   _octave; //!!!Combine these two into NSObject MGPitch Class
     NSInteger   _duration; /** in pulses (I think) */
     NSInteger   _startTime;
     NSInteger   _measureNumber; /** The measure number in the score */
@@ -37,7 +37,6 @@
     
     u_char  instrument;    /** The instrument */
     
-    NSInteger   _keyPressure;
     u_char  keyPressure;   /** The key pressure */
     u_char  chanPressure;  /** The channel pressure */
     u_char  controlNum;    /** The controller number */

@@ -18,6 +18,7 @@
 #import "MGSheetMusicView.h"
 #import "MGSheetMusicViewController.h"
 #import "MGSingleStaffView.h"
+#import "DemoViewController.h"
 
 
 #import "MidiFile.h"
@@ -29,6 +30,7 @@
 -(void)testMIDIFile;
 -(void)testVaidyanathan;
 -(void)testMG;
+-(void)kairos;
 @end
 
 
@@ -62,13 +64,15 @@
 }
 
 
+//Outdated
 -(void)test {
     //[self testScale];
     //[self testMIDIFile];
     //[self writeMIDI:nil];
     //[self loadMIDI:nil];
     //[self testVaidyanathan];
-    [self testMG];
+    //[self testMG];
+    [self kairos];
     return;
     
     HSTREAM stream = [self initStream];
@@ -271,22 +275,50 @@
     [self.view addSubview:sheetMusicController.sheetMusicView];
        
     // Test a single staff view
-    MGSingleStaffView *staff = [[MGSingleStaffView alloc]initWithFrame:CGRectMake(100, 100, 300, 300)];
+    MGSingleStaffView *staff = [[MGSingleStaffView alloc]initWithFrame:CGRectMake(100, 100, 512, 256)];
     [self.view addSubview:staff]; 
     CGRect frame = staff.frame;
     
     MGPart *part = [score.partsArray objectAtIndex:0];
     MGNote *note = [part.notesArray objectAtIndex:0];
     //[note initImageWithValue:Quarter];
-    note.image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"red.png"]];
-    note.image.center = [staff getPosition:0 forPitch:PITCH_CLASS_A];
-    [staff addSubview:note.image];
+    
+    //To test note placement
+    if (1) {
+        note.image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"QuarterNote.png"]];
+        note.image.center = [staff getPosition:0 forPitch:PITCH_CLASS_F andOctave:5];
+        [staff addSubview:note.image];
+       
+
+        MGNote *note2 = [part.notesArray objectAtIndex:1];
+        note2.image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"red.png"]];
+        note2.image.center = [staff getPosition:1 forPitch:PITCH_CLASS_B andOctave:4];
+        [staff addSubview:note2.image];
+
+        MGNote *note3 = [part.notesArray objectAtIndex:2];
+        note3.image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"red.png"]];
+        note3.image.center = [staff getPosition:2 forPitch:PITCH_CLASS_C andOctave:5];
+        [staff addSubview:note3.image];
+    }
+    
+    if (1) {
+        staff.timeSignature = [[MGTimeSignature alloc]initWithNumerator:4 andDenominator:4 andQuarter:60 andTempo:100]; 
+        [staff displayTimeSignature];
+    }
     
     //UIImageView *test = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"QuarterNote.png"]];
     //[self.view addSubview:test];
     
      NSLog(@"testMG complete");
 }
+
+-(void)kairos {
+    MGDemoViewController *demoController = [[MGDemoViewController alloc]init];
+    [demoController go];
+    [self.view addSubview:demoController.view];
+    NSLog(@"Kairos test complete");
+}
+
 
 #pragma mark 
 #pragma mark Private

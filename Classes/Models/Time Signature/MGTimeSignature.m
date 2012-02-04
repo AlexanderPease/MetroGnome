@@ -21,6 +21,10 @@
  * (like 120, 240, etc) into note durations (half, quarter, eighth, etc).
  */
 
+@interface MGTimeSignature (Private)
+-(void)initView;
+@end
+
 @implementation MGTimeSignature
 @synthesize numerator   = _numerator;
 @synthesize denominator = _denominator;
@@ -61,6 +65,9 @@
         beat = self.quarter / (self.denominator/4);
     
     self.measure = self.numerator * beat;
+    
+    //Init the image
+    [self initView];
     return self;
 }
 
@@ -72,8 +79,8 @@
     }
     else {
         self.view = [[UIImageView alloc]initWithImage:
-                     [UIImage imageNamed:@"standIn.png"]];
-        NSLog(@"MGTimeSignature: No image");
+                     [UIImage imageNamed:@"red.png"]];
+        NSLog(@"MGTimeSignature: No supported image");
     }
 }
 

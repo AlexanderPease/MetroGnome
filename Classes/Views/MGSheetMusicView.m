@@ -29,7 +29,7 @@
     if (self = [super initWithFrame:frame]) {
         self.autoresizesSubviews = YES;
         self.backgroundColor = [UIColor colorWithPatternImage:
-                                [UIImage imageNamed:@"SheetMusicPaper.png"]];
+                                [UIImage imageNamed:@"Sibelius Paper.png"]];
     }
     return self;
 }
