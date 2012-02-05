@@ -13,7 +13,6 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		C948E92614DCF16700AA23F7 /* Z Kairos Blues.mid in Resources */ = {isa = PBXBuildFile; fileRef = C948E92514DCF16700AA23F7 /* Z Kairos Blues.mid */; };
 		C948E92914DCF3CA00AA23F7 /* Sibelius Paper.png in Resources */ = {isa = PBXBuildFile; fileRef = C948E92814DCF3CA00AA23F7 /* Sibelius Paper.png */; };
 		C948E92D14DCFADD00AA23F7 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C948E92C14DCFADD00AA23F7 /* DemoViewController.m */; };
 		C9551E86149EFE7600836A6D /* MGSheetMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9551E85149EFE7600836A6D /* MGSheetMusicView.m */; };
@@ -46,6 +45,13 @@
 		C9BDF7C5149D9DA20000D67A /* Chopin Ocean Etude.mid in Resources */ = {isa = PBXBuildFile; fileRef = C9BDF7C4149D9DA20000D67A /* Chopin Ocean Etude.mid */; };
 		C9D6329214A05E5E005A6CC1 /* MGScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D6329114A05E5E005A6CC1 /* MGScore.m */; };
 		C9D6329714A06B8B005A6CC1 /* MGHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D6329614A06B8B005A6CC1 /* MGHomeViewController.m */; };
+		C9E2F7AB14DD246600D98456 /* C Major Blues Scale.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7A914DD246600D98456 /* C Major Blues Scale.tiff */; };
+		C9E2F7AC14DD246600D98456 /* C Major Blues Scale.mid in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7AA14DD246600D98456 /* C Major Blues Scale.mid */; };
+		C9E2F7AF14DD2F2F00D98456 /* Kairos3Notes.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7AE14DD2F2F00D98456 /* Kairos3Notes.tiff */; };
+		C9E2F7B114DD376000D98456 /* Karios3Notes.mid in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7B014DD376000D98456 /* Karios3Notes.mid */; };
+		C9E2F7B314DD76C000D98456 /* PianoKeys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7B214DD76C000D98456 /* PianoKeys.jpg */; };
+		C9E2F7B514DD77D800D98456 /* Kairos3NotesandKeys.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7B414DD77D800D98456 /* Kairos3NotesandKeys.tiff */; };
+		C9E2F7B914DD7BAC00D98456 /* Z Kairos Blues.mid in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7B814DD7BAC00D98456 /* Z Kairos Blues.mid */; };
 		CE0865631449751100FB2CE3 /* MGRest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0865621449751100FB2CE3 /* MGRest.m */; };
 		CE08656B14497D9B00FB2CE3 /* MGTimeSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = CE08656A14497D9B00FB2CE3 /* MGTimeSignature.m */; };
 		CE0B16461435501F003BAD47 /* MGChord.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0B16451435501F003BAD47 /* MGChord.m */; };
@@ -73,7 +79,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* MetroGnomeiPad_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetroGnomeiPad_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* MetroGnomeiPad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MetroGnomeiPad-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		C948E92514DCF16700AA23F7 /* Z Kairos Blues.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "Z Kairos Blues.mid"; sourceTree = "<group>"; };
 		C948E92814DCF3CA00AA23F7 /* Sibelius Paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sibelius Paper.png"; path = "Resources/Sibelius Paper.png"; sourceTree = "<group>"; };
 		C948E92B14DCFADD00AA23F7 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoViewController.h; path = Controllers/DemoViewController.h; sourceTree = "<group>"; };
 		C948E92C14DCFADD00AA23F7 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoViewController.m; path = Controllers/DemoViewController.m; sourceTree = "<group>"; };
@@ -116,6 +121,13 @@
 		C9D6329114A05E5E005A6CC1 /* MGScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGScore.m; path = Models/Scores/MGScore.m; sourceTree = "<group>"; };
 		C9D6329514A06B8B005A6CC1 /* MGHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGHomeViewController.h; path = Controllers/HomeViewController/MGHomeViewController.h; sourceTree = "<group>"; };
 		C9D6329614A06B8B005A6CC1 /* MGHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGHomeViewController.m; path = Controllers/HomeViewController/MGHomeViewController.m; sourceTree = "<group>"; };
+		C9E2F7A914DD246600D98456 /* C Major Blues Scale.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "C Major Blues Scale.tiff"; path = "Resources/C Major Blues Scale.tiff"; sourceTree = "<group>"; };
+		C9E2F7AA14DD246600D98456 /* C Major Blues Scale.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = "C Major Blues Scale.mid"; path = "Resources/C Major Blues Scale.mid"; sourceTree = "<group>"; };
+		C9E2F7AE14DD2F2F00D98456 /* Kairos3Notes.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Kairos3Notes.tiff; path = Resources/Kairos3Notes.tiff; sourceTree = "<group>"; };
+		C9E2F7B014DD376000D98456 /* Karios3Notes.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = Karios3Notes.mid; path = Resources/Karios3Notes.mid; sourceTree = "<group>"; };
+		C9E2F7B214DD76C000D98456 /* PianoKeys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = PianoKeys.jpg; path = Resources/PianoKeys.jpg; sourceTree = "<group>"; };
+		C9E2F7B414DD77D800D98456 /* Kairos3NotesandKeys.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Kairos3NotesandKeys.tiff; path = Resources/Kairos3NotesandKeys.tiff; sourceTree = "<group>"; };
+		C9E2F7B814DD7BAC00D98456 /* Z Kairos Blues.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "Z Kairos Blues.mid"; sourceTree = "<group>"; };
 		CE0865611449751100FB2CE3 /* MGRest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGRest.h; path = Classes/Models/Note/Rests/MGRest.h; sourceTree = SOURCE_ROOT; };
 		CE0865621449751100FB2CE3 /* MGRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGRest.m; path = Classes/Models/Note/Rests/MGRest.m; sourceTree = SOURCE_ROOT; };
 		CE08656914497D9B00FB2CE3 /* MGTimeSignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGTimeSignature.h; path = "Classes/Models/Time Signature/MGTimeSignature.h"; sourceTree = SOURCE_ROOT; };
@@ -218,8 +230,14 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C9E2F7B814DD7BAC00D98456 /* Z Kairos Blues.mid */,
+				C9E2F7B414DD77D800D98456 /* Kairos3NotesandKeys.tiff */,
+				C9E2F7B214DD76C000D98456 /* PianoKeys.jpg */,
+				C9E2F7B014DD376000D98456 /* Karios3Notes.mid */,
+				C9E2F7AE14DD2F2F00D98456 /* Kairos3Notes.tiff */,
+				C9E2F7A914DD246600D98456 /* C Major Blues Scale.tiff */,
+				C9E2F7AA14DD246600D98456 /* C Major Blues Scale.mid */,
 				C948E92814DCF3CA00AA23F7 /* Sibelius Paper.png */,
-				C948E92514DCF16700AA23F7 /* Z Kairos Blues.mid */,
 				C9585C1714D8FA6000DB72FE /* red.png */,
 				C9A1BA8814D7B74A00FF5E5A /* EighthNote.png */,
 				C9A1BA8914D7B74A00FF5E5A /* EndBarLine.png */,
@@ -535,8 +553,14 @@
 				C9A1BA9814D7B74A00FF5E5A /* TrebleClef.png in Resources */,
 				C9A1BA9914D7B74A00FF5E5A /* WholeNote.png in Resources */,
 				C9585C1814D8FA6000DB72FE /* red.png in Resources */,
-				C948E92614DCF16700AA23F7 /* Z Kairos Blues.mid in Resources */,
 				C948E92914DCF3CA00AA23F7 /* Sibelius Paper.png in Resources */,
+				C9E2F7AB14DD246600D98456 /* C Major Blues Scale.tiff in Resources */,
+				C9E2F7AC14DD246600D98456 /* C Major Blues Scale.mid in Resources */,
+				C9E2F7AF14DD2F2F00D98456 /* Kairos3Notes.tiff in Resources */,
+				C9E2F7B114DD376000D98456 /* Karios3Notes.mid in Resources */,
+				C9E2F7B314DD76C000D98456 /* PianoKeys.jpg in Resources */,
+				C9E2F7B514DD77D800D98456 /* Kairos3NotesandKeys.tiff in Resources */,
+				C9E2F7B914DD7BAC00D98456 /* Z Kairos Blues.mid in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
