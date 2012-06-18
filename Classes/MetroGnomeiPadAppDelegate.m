@@ -29,7 +29,7 @@
     
     //MidiController is purely a test class
     MGMIDIController *controller = [[MGMIDIController alloc]init];
-    [controller test];  
+    [controller test];  //TEST
     [self.window addSubview:controller.view];
     [controller release];
     

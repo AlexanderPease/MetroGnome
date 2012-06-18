@@ -19,6 +19,7 @@
 #import "MGSheetMusicViewController.h"
 #import "MGSingleStaffView.h"
 #import "DemoViewController.h"
+#import "XMLView.h"
 
 
 #import "MidiFile.h"
@@ -72,7 +73,8 @@
     //[self loadMIDI:nil];
     //[self testVaidyanathan];
     //[self testMG];
-    [self kairos];
+    //[self kairos];
+    [self xml];
     return;
     
     HSTREAM stream = [self initStream];
@@ -317,6 +319,13 @@
     [demoController go];
     [self.view addSubview:demoController.view];
     NSLog(@"Kairos test complete");
+}
+
+//Test XML
+-(void)xml {
+    XMLView *xmlView = [[XMLView alloc]initWithFrame:self.view.frame];
+    [self.view addSubview:xmlView];
+    [xmlView test];
 }
 
 

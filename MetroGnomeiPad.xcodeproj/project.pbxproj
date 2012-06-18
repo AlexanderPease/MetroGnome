@@ -24,6 +24,9 @@
 		C987723014CCE1B500649C26 /* MGDoubleStaffView.m in Sources */ = {isa = PBXBuildFile; fileRef = C987722F14CCE1B500649C26 /* MGDoubleStaffView.m */; };
 		C98BDDFB14A13A4F00CB888F /* TrebleClefLogoBold.png in Resources */ = {isa = PBXBuildFile; fileRef = C98BDDFA14A13A4F00CB888F /* TrebleClefLogoBold.png */; };
 		C98BDE4C14A1A45900CB888F /* SheetMusicPaperLogoPortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = C98BDE4B14A1A45900CB888F /* SheetMusicPaperLogoPortrait.png */; };
+		C98C7E2315858B9D00F4DE88 /* XMLView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98C7E2215858B9D00F4DE88 /* XMLView.m */; };
+		C98C7E2815858C7600F4DE88 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = C98C7E2615858C7600F4DE88 /* test.txt */; };
+		C98C7E2915858C7600F4DE88 /* g.xml in Resources */ = {isa = PBXBuildFile; fileRef = C98C7E2715858C7600F4DE88 /* g.xml */; };
 		C99A0A3914D3BC8F00A71551 /* MGBarLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C99A0A3814D3BC8F00A71551 /* MGBarLineView.m */; };
 		C99A0A3C14D3BE7200A71551 /* SheetMusicPaper.png in Resources */ = {isa = PBXBuildFile; fileRef = C99A0A3B14D3BE7200A71551 /* SheetMusicPaper.png */; };
 		C99A0A3E14D3BEE800A71551 /* BarLine.png in Resources */ = {isa = PBXBuildFile; fileRef = C99A0A3D14D3BEE800A71551 /* BarLine.png */; };
@@ -96,6 +99,10 @@
 		C987722F14CCE1B500649C26 /* MGDoubleStaffView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGDoubleStaffView.m; path = "Views/Musical Notation Views/MGDoubleStaffView.m"; sourceTree = "<group>"; };
 		C98BDDFA14A13A4F00CB888F /* TrebleClefLogoBold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TrebleClefLogoBold.png; path = Resources/TrebleClefLogoBold.png; sourceTree = "<group>"; };
 		C98BDE4B14A1A45900CB888F /* SheetMusicPaperLogoPortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SheetMusicPaperLogoPortrait.png; path = Resources/SheetMusicPaperLogoPortrait.png; sourceTree = "<group>"; };
+		C98C7E2115858B9D00F4DE88 /* XMLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLView.h; sourceTree = "<group>"; };
+		C98C7E2215858B9D00F4DE88 /* XMLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLView.m; sourceTree = "<group>"; };
+		C98C7E2615858C7600F4DE88 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		C98C7E2715858C7600F4DE88 /* g.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = g.xml; sourceTree = "<group>"; };
 		C99A0A3714D3BC8F00A71551 /* MGBarLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGBarLineView.h; path = "Views/Musical Notation Views/MGBarLineView.h"; sourceTree = "<group>"; };
 		C99A0A3814D3BC8F00A71551 /* MGBarLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGBarLineView.m; path = "Views/Musical Notation Views/MGBarLineView.m"; sourceTree = "<group>"; };
 		C99A0A3B14D3BE7200A71551 /* SheetMusicPaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SheetMusicPaper.png; path = Resources/SheetMusicPaper.png; sourceTree = "<group>"; };
@@ -230,6 +237,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C98C7E2515858C5E00F4DE88 /* XML Files */,
 				C9E2F7B814DD7BAC00D98456 /* Z Kairos Blues.mid */,
 				C9E2F7B414DD77D800D98456 /* Kairos3NotesandKeys.tiff */,
 				C9E2F7B214DD76C000D98456 /* PianoKeys.jpg */,
@@ -307,6 +315,15 @@
 				C9551E89149F01F300836A6D /* MGSheetMusicViewController.m */,
 			);
 			name = SheetMusicViewController;
+			sourceTree = "<group>";
+		};
+		C98C7E2515858C5E00F4DE88 /* XML Files */ = {
+			isa = PBXGroup;
+			children = (
+				C98C7E2615858C7600F4DE88 /* test.txt */,
+				C98C7E2715858C7600F4DE88 /* g.xml */,
+			);
+			name = "XML Files";
 			sourceTree = "<group>";
 		};
 		C9A1BA8114D603F300FF5E5A /* Options */ = {
@@ -436,6 +453,8 @@
 		CECE1178143358860063EC3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C98C7E2115858B9D00F4DE88 /* XMLView.h */,
+				C98C7E2215858B9D00F4DE88 /* XMLView.m */,
 				C98771E314CC8C9900649C26 /* Musical Notation */,
 				C9551E84149EFE7600836A6D /* MGSheetMusicView.h */,
 				C9551E85149EFE7600836A6D /* MGSheetMusicView.m */,
@@ -561,6 +580,8 @@
 				C9E2F7B314DD76C000D98456 /* PianoKeys.jpg in Resources */,
 				C9E2F7B514DD77D800D98456 /* Kairos3NotesandKeys.tiff in Resources */,
 				C9E2F7B914DD7BAC00D98456 /* Z Kairos Blues.mid in Resources */,
+				C98C7E2815858C7600F4DE88 /* test.txt in Resources */,
+				C98C7E2915858C7600F4DE88 /* g.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +615,7 @@
 				C99A0A3914D3BC8F00A71551 /* MGBarLineView.m in Sources */,
 				C9A1BA8514D6041500FF5E5A /* MGOptions.m in Sources */,
 				C948E92D14DCFADD00AA23F7 /* DemoViewController.m in Sources */,
+				C98C7E2315858B9D00F4DE88 /* XMLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
