@@ -28,16 +28,19 @@
     //[application setStatusBarOrientation:UIInterfaceOrientationLandscapeRight animated:NO];  
     
     //MidiController is purely a test class
-    MGMIDIController *controller = [[MGMIDIController alloc]init];
-    [controller test];  //TEST
-    [self.window addSubview:controller.view];
-    [controller release];
+    //MGMIDIController *controller = [[MGMIDIController alloc]init];
+    //[controller test];  //TEST
+    //[self.window addSubview:controller.view];
+    //[controller release];
     
     //MGHomeViewController *homeViewController = [[MGHomeViewController alloc] init];
     //[self.window addSubview:homeViewController.view];
     
     //MGSheetMusicViewController *viewController = [[MGSheetMusicViewController alloc]initWithMGScore:nil];
     //[self.window addSubview:viewController.sheetMusicView];
+    
+    AudioTest * at = [AudioTest audioTest];
+    [at midiTest];
     return YES;
 }
 
