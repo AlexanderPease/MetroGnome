@@ -13,7 +13,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		C9434E5815C1A46700E9FACA /* AudioTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9434E5715C1A46700E9FACA /* AudioTest.m */; };
+		C9434E5815C1A46700E9FACA /* MVPMidiPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C9434E5715C1A46700E9FACA /* MVPMidiPlayer.m */; };
 		C9434E5B15C1A47900E9FACA /* Gorts_Filters.SF2 in Resources */ = {isa = PBXBuildFile; fileRef = C9434E5915C1A47900E9FACA /* Gorts_Filters.SF2 */; };
 		C9434E5C15C1A47900E9FACA /* simpletest.mid in Resources */ = {isa = PBXBuildFile; fileRef = C9434E5A15C1A47900E9FACA /* simpletest.mid */; };
 		C948E92914DCF3CA00AA23F7 /* Sibelius Paper.png in Resources */ = {isa = PBXBuildFile; fileRef = C948E92814DCF3CA00AA23F7 /* Sibelius Paper.png */; };
@@ -86,8 +86,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* MetroGnomeiPad_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetroGnomeiPad_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* MetroGnomeiPad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MetroGnomeiPad-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		C9434E5615C1A46700E9FACA /* AudioTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioTest.h; sourceTree = "<group>"; };
-		C9434E5715C1A46700E9FACA /* AudioTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioTest.m; sourceTree = "<group>"; };
+		C9434E5615C1A46700E9FACA /* MVPMidiPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MVPMidiPlayer.h; sourceTree = "<group>"; };
+		C9434E5715C1A46700E9FACA /* MVPMidiPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVPMidiPlayer.m; sourceTree = "<group>"; };
 		C9434E5915C1A47900E9FACA /* Gorts_Filters.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gorts_Filters.SF2; sourceTree = "<group>"; };
 		C9434E5A15C1A47900E9FACA /* simpletest.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = simpletest.mid; sourceTree = "<group>"; };
 		C948E92814DCF3CA00AA23F7 /* Sibelius Paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sibelius Paper.png"; path = "Resources/Sibelius Paper.png"; sourceTree = "<group>"; };
@@ -302,8 +302,8 @@
 			children = (
 				C9434E5915C1A47900E9FACA /* Gorts_Filters.SF2 */,
 				C9434E5A15C1A47900E9FACA /* simpletest.mid */,
-				C9434E5615C1A46700E9FACA /* AudioTest.h */,
-				C9434E5715C1A46700E9FACA /* AudioTest.m */,
+				C9434E5615C1A46700E9FACA /* MVPMidiPlayer.h */,
+				C9434E5715C1A46700E9FACA /* MVPMidiPlayer.m */,
 			);
 			name = MVPMidiPlayer;
 			path = Classes;
@@ -652,7 +652,7 @@
 				C948E92D14DCFADD00AA23F7 /* DemoViewController.m in Sources */,
 				C98C7E2315858B9D00F4DE88 /* XMLView.m in Sources */,
 				C9E9D4A2158EBA0300144D92 /* XMLReader.m in Sources */,
-				C9434E5815C1A46700E9FACA /* AudioTest.m in Sources */,
+				C9434E5815C1A46700E9FACA /* MVPMidiPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

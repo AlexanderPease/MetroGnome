@@ -1,54 +1,49 @@
 //
-//  AudioTest.m
+//  MVPMidiPlayer.m
 //  FirstGame
 //
 //  Created by Ben Smiley-Andrews on 15/03/2012.
 //  Copyright 2012 Deluge. All rights reserved.
 //
 
-#import "AudioTest.h"
+#import "MVPMidiPlayer.h"
 
 
 #define kLowNote  48
 #define kHighNote 72
 #define kMidNote  60
 
-@interface AudioTest ()
-
-@property (readwrite) AUGraph   processingGraph;
-@property (readwrite) AudioUnit samplerUnit;
-@property (readwrite) AudioUnit ioUnit;
-
-
-@end
-
-@implementation AudioTest
-
+@implementation MVPMidiPlayer
 
 @synthesize processingGraph     = _processingGraph;
 @synthesize samplerUnit         = _samplerUnit;
 @synthesize ioUnit              = _ioUnit;
 
 
-+ audioTest {
-    return [[self alloc] initAudioTest];
++MVPMidiPlayer {
+    return [[self alloc] init];
 }
 
 
--(id) initAudioTest {
-	if((self = [self init] )) {
+-(id)init {
+	if((self = [super init] )) {
 
 	}
 	return self;
 }
 
-- (BOOL) createAUGraph {
+/*******************************************************************************/
+/* Creates AUGraph with two AUNodes:
+ Sampler: This is a unit converts MIDI to music sounds defined 
+    in a Sound Font or AUPreset and is available on iOS 5
+ RemoteIO: This unit allows us to output sounds to iPhone speakers */
+-(BOOL)createAUGraph {
     
     // Each core audio call returns an OSStatus. This means that we
     // Can see if there have been any errors in the setup
 	OSStatus result = noErr;
     
-    // Create 2 audio units one sampler and one IO
+    // Create 2 audio units, one sampler and one IO
 	AUNode samplerNode, ioNode;
     
     // Specify the common portion of an audio unit's identify, used for both audio units
@@ -96,6 +91,8 @@
     return YES;
 }
 
+/*******************************************************************************/
+
 // Starting with instantiated audio processing graph, configure its 
 // audio units, initialize it, and start it.
 - (void) configureAndStartAudioProcessingGraph: (AUGraph) graph {
@@ -115,6 +112,8 @@
         //CAShow (graph); 
     }
 }
+
+/*******************************************************************************/
 
 void MyMIDINotifyProc (const MIDINotification  *message, void *refCon) {
     printf("MIDI Notify, messageId=%d,", message->messageID);
@@ -189,7 +188,7 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
     }
 }
 
-
+/*******************************************************************************/
 
 // this method assumes the class has a member called mySamplerUnit
 // which is an instance of an AUSampler
@@ -221,7 +220,9 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
     return result;
 }
 
--(void) midiTest {
+/*******************************************************************************/
+
+-(void)midiTest {
 	
     OSStatus result = noErr;
     
@@ -294,7 +295,7 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
     
     
     while (1) { // kill time until the music is over
-        usleep (3 * 1000 * 1000);
+        usleep (3 * 1000 * 1000); //suspend thread execution, measured in microseconds
         MusicTimeStamp now = 0;
         MusicPlayerGetTime (p, &now);
         if (now >= len)

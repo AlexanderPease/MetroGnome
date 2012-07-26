@@ -39,8 +39,9 @@
     //MGSheetMusicViewController *viewController = [[MGSheetMusicViewController alloc]initWithMGScore:nil];
     //[self.window addSubview:viewController.sheetMusicView];
     
-    AudioTest * at = [AudioTest audioTest];
-    [at midiTest];
+    MVPMidiPlayer *midiPlayer = [[MVPMidiPlayer alloc]init];
+    [midiPlayer midiTest];
+    
     return YES;
 }
 

@@ -1,8 +1,9 @@
 //
-//  AudioTest.h
+//  MVPMidiPlayer.h
 //  FirstGame
 //
 //  Created by Ben Smiley-Andrews on 15/03/2012.
+//  http://www.deluge.co/?q=midi-driven-animation-core-audio-objective-c
 //  Copyright 2012 Deluge. All rights reserved.
 //
 
@@ -23,13 +24,16 @@
 
 //#include <CoreFoundation/CoreFoundation.h>
 
-@interface AudioTest : NSObject {
+@interface MVPMidiPlayer : NSObject {
 
 }
+@property(readwrite) AUGraph   processingGraph;
+@property(readwrite) AudioUnit samplerUnit;
+@property(readwrite) AudioUnit ioUnit;
 
-+(id) audioTest;
++(id)MVPMidiPlayer;
 
--(id) initAudioTest;
--(void) midiTest;
+-(id)init;
+-(void)midiTest;
 
 @end
