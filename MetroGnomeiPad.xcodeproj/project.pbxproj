@@ -55,6 +55,7 @@
 		C9E2F7B314DD76C000D98456 /* PianoKeys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7B214DD76C000D98456 /* PianoKeys.jpg */; };
 		C9E2F7B514DD77D800D98456 /* Kairos3NotesandKeys.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7B414DD77D800D98456 /* Kairos3NotesandKeys.tiff */; };
 		C9E2F7B914DD7BAC00D98456 /* Z Kairos Blues.mid in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7B814DD7BAC00D98456 /* Z Kairos Blues.mid */; };
+		C9E9D4A2158EBA0300144D92 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E9D4A1158EBA0300144D92 /* XMLReader.m */; };
 		CE0865631449751100FB2CE3 /* MGRest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0865621449751100FB2CE3 /* MGRest.m */; };
 		CE08656B14497D9B00FB2CE3 /* MGTimeSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = CE08656A14497D9B00FB2CE3 /* MGTimeSignature.m */; };
 		CE0B16461435501F003BAD47 /* MGChord.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0B16451435501F003BAD47 /* MGChord.m */; };
@@ -135,6 +136,8 @@
 		C9E2F7B214DD76C000D98456 /* PianoKeys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = PianoKeys.jpg; path = Resources/PianoKeys.jpg; sourceTree = "<group>"; };
 		C9E2F7B414DD77D800D98456 /* Kairos3NotesandKeys.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Kairos3NotesandKeys.tiff; path = Resources/Kairos3NotesandKeys.tiff; sourceTree = "<group>"; };
 		C9E2F7B814DD7BAC00D98456 /* Z Kairos Blues.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "Z Kairos Blues.mid"; sourceTree = "<group>"; };
+		C9E9D4A0158EBA0300144D92 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLReader.h; path = Controllers/XMLReader.h; sourceTree = "<group>"; };
+		C9E9D4A1158EBA0300144D92 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLReader.m; path = Controllers/XMLReader.m; sourceTree = "<group>"; };
 		CE0865611449751100FB2CE3 /* MGRest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGRest.h; path = Classes/Models/Note/Rests/MGRest.h; sourceTree = SOURCE_ROOT; };
 		CE0865621449751100FB2CE3 /* MGRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGRest.m; path = Classes/Models/Note/Rests/MGRest.m; sourceTree = SOURCE_ROOT; };
 		CE08656914497D9B00FB2CE3 /* MGTimeSignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGTimeSignature.h; path = "Classes/Models/Time Signature/MGTimeSignature.h"; sourceTree = SOURCE_ROOT; };
@@ -374,6 +377,15 @@
 			name = MIDIController;
 			sourceTree = "<group>";
 		};
+		C9E9D49F158EB9E500144D92 /* XMLReader */ = {
+			isa = PBXGroup;
+			children = (
+				C9E9D4A0158EBA0300144D92 /* XMLReader.h */,
+				C9E9D4A1158EBA0300144D92 /* XMLReader.m */,
+			);
+			name = XMLReader;
+			sourceTree = "<group>";
+		};
 		CE086560144974D600FB2CE3 /* Rests */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +477,7 @@
 		CECE11791433588C0063EC3F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C9E9D49F158EB9E500144D92 /* XMLReader */,
 				C948E92A14DCFABC00AA23F7 /* DemoViewController */,
 				C987722D14CC962000649C26 /* SheetMusicViewController */,
 				C9D6329414A06B60005A6CC1 /* HomeViewController */,
@@ -616,6 +629,7 @@
 				C9A1BA8514D6041500FF5E5A /* MGOptions.m in Sources */,
 				C948E92D14DCFADD00AA23F7 /* DemoViewController.m in Sources */,
 				C98C7E2315858B9D00F4DE88 /* XMLView.m in Sources */,
+				C9E9D4A2158EBA0300144D92 /* XMLReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
