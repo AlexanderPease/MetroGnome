@@ -13,17 +13,25 @@
 #define kHighNote 72
 #define kMidNote  60
 
+@interface MVPMidiPlayer (Private)
+-(BOOL)createAUGraph;
+-(void)configureAndStartAudioProcessingGraph:(AUGraph)graph;
+@end
+
 @implementation MVPMidiPlayer
 
 @synthesize processingGraph     = _processingGraph;
 @synthesize samplerUnit         = _samplerUnit;
 @synthesize ioUnit              = _ioUnit;
+@synthesize player              = _player;
 
 
-+MVPMidiPlayer {
++(id)MVPMidiPlayer {
     return [[self alloc] init];
 }
 
+
+//-(void)dealloc
 
 -(id)init {
 	if((self = [super init] )) {
@@ -143,13 +151,13 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
                     noteType = @"C";
                     break;
                 case 1:
-                    noteType = @"C#";
+                    noteType = @"C#/Db";
                     break;
                 case 2:
                     noteType = @"D";
                     break;
                 case 3:
-                    noteType = @"D#";
+                    noteType = @"D#/Eb";
                     break;
                 case 4:
                     noteType = @"E";
@@ -158,19 +166,19 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
                     noteType = @"F";
                     break;
                 case 6:
-                    noteType = @"F#";
+                    noteType = @"F#/Gb";
                     break;
                 case 7:
                     noteType = @"G";
                     break;
                 case 8:
-                    noteType = @"G#";
+                    noteType = @"G#/Ab";
                     break;
                 case 9:
                     noteType = @"A";
                     break;
                 case 10:
-                    noteType = @"Bb";
+                    noteType = @"A#/Bb";
                     break;
                 case 11:
                     noteType = @"B";
@@ -221,8 +229,113 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
 }
 
 /*******************************************************************************/
+#pragma mark -
+#pragma mark Public methods
+/*******************************************************************************/
+-(id)initWithMidiFile:(NSURL *)midiFileURL {
+    if (self = [super init]) {
+        OSStatus result = noErr;
+        
+        [self createAUGraph];
+        [self configureAndStartAudioProcessingGraph: self.processingGraph];
+        
+        // Create a client
+        MIDIClientRef virtualMidi;
+        result = MIDIClientCreate(CFSTR("Virtual Client"),
+                                  MyMIDINotifyProc,
+                                  NULL,
+                                  &virtualMidi);
+        
+        NSAssert( result == noErr, @"MIDIClientCreate failed. Error code: %d '%.4s'", (int) result, (const char *)&result);
+        
+        // Create an endpoint
+        MIDIEndpointRef virtualEndpoint;
+        result = MIDIDestinationCreate(virtualMidi, @"Virtual Destination", MyMIDIReadProc, self.samplerUnit, &virtualEndpoint);
+        
+        NSAssert( result == noErr, @"MIDIDestinationCreate failed. Error code: %d '%.4s'", (int) result, (const char *)&result);
+        
+        
+        
+        // Create a new music sequence
+        MusicSequence sequence;
+        // Initialise the music sequence
+        NewMusicSequence(&sequence);
+        
+        // Get a string to the path of the MIDI file which
+        // should be located in the Resources folder
+        /*NSString *midiFilePath = [[NSBundle mainBundle]
+                                  pathForResource:@"simpletest"
+                                  ofType:@"mid"]; */
+        
+        // Create a new URL which points to the MIDI file
+        //NSURL * midiFileURL2 = [NSURL fileURLWithPath:midiFilePath];
+        
+        MusicSequenceFileLoad(sequence, (__bridge CFURLRef) midiFileURL, 0, 0);
+        
+        // Create a new music player
+        MusicPlayer  p;
+        // Initialise the music player
+        NewMusicPlayer(&p);
+        // Set as property player
+        self.player = p;
+        
+        // Set the endpoint of the sequence to be our virtual endpoint
+        MusicSequenceSetMIDIEndpoint(sequence, virtualEndpoint);
+        
+        // Load the sound font from file, use preset 1 for piano
+        NSURL *presetURL = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"ChoriumRevA" ofType:@"SF2"]];
+        
+        // Initialise the sound font
+        [self loadFromDLSOrSoundFont: (NSURL *)presetURL withPatch: (int)1];
+        
+        // Load the sequence into the music player
+        MusicPlayerSetSequence(self.player, sequence);
+        // Called to do some MusicPlayer setup. This just 
+        // reduces latency when MusicPlayerStart is called
+        MusicPlayerPreroll(self.player);
+        // Starts the music playing
+        MusicPlayerStart(self.player);
+        
+        // Get length of track so that we know how long to kill time for
+        MusicTrack t;
+        MusicTimeStamp len;
+        UInt32 sz = sizeof(MusicTimeStamp);
+        MusicSequenceGetIndTrack(sequence, 1, &t);
+        MusicTrackGetProperty(t, kSequenceTrackProperty_TrackLength, &len, &sz);
+        
+        
+        while (1) { // kill time until the music is over
+            usleep (3 * 1000 * 1000); //suspend thread execution, measured in microseconds
+            MusicTimeStamp now = 0;
+            MusicPlayerGetTime (self.player, &now);
+            if (now >= len)
+                break;
+        }
+        
+        // Stop the player and dispose of the objects
+        MusicPlayerStop(self.player);
+        DisposeMusicSequence(sequence);
+        DisposeMusicPlayer(self.player);
+        }
+    return self;
+}
 
--(void)midiTest {
+
+/******************************************************************************/
+-(void)play {
+    MusicPlayerStart(self.player);
+}
+
+-(void)pause {
+    
+}
+
+-(void)stop {
+    
+}
+/******************************************************************************/
+
+-(void)originalCode {
 	
     OSStatus result = noErr;
     
@@ -269,14 +382,14 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
     // Initialise the music player
     NewMusicPlayer(&p);
 
-    // ************* Set the endpoint of the sequence to be our virtual endpoint
+    // Set the endpoint of the sequence to be our virtual endpoint
     MusicSequenceSetMIDIEndpoint(s, virtualEndpoint);
     
-    // Load the ound font from file
-    NSURL *presetURL = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Gorts_Filters" ofType:@"sf2"]];
+    // Load the sound font from file, use preset 1 for piano
+    NSURL *presetURL = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"ChoriumRevA" ofType:@"SF2"]];
     
     // Initialise the sound font
-    [self loadFromDLSOrSoundFont: (NSURL *)presetURL withPatch: (int)10];
+    [self loadFromDLSOrSoundFont: (NSURL *)presetURL withPatch: (int)1];
 
     // Load the sequence into the music player
     MusicPlayerSetSequence(p, s);

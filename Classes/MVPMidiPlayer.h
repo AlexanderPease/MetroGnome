@@ -7,6 +7,32 @@
 //  Copyright 2012 Deluge. All rights reserved.
 //
 
+#import <AudioToolbox/MusicPlayer.h>
+
+
+@interface MVPMidiPlayer : NSObject {
+    MusicPlayer _player;
+}
+@property(readwrite) AUGraph   processingGraph;
+@property(readwrite) AudioUnit samplerUnit;
+@property(readwrite) AudioUnit ioUnit;
+@property(nonatomic,assign) MusicPlayer player;
+
++(id)MVPMidiPlayer;
+
+-(id)init;
+
+-(id)initWithMidiFile:(NSURL *)midiFileURL;
+-(void)play;
+-(void)pause;//return timestamp?
+-(void)stop; 
+
+-(void)originalCode; //the original method
+
+@end
+
+//Extra comments from original code
+
 //#include <CoreMidi/MIDIServices.h>
 //#include <CoreMidi/MIDISetup.h>
 //#include <CoreMidi/MIDIThruConnection.h>
@@ -20,20 +46,4 @@
 //#import <AVFoundation/AVFoundation.h>
 //#import <CoreAudio/CoreAudioTypes.h>
 
-#import <AudioToolbox/MusicPlayer.h>
-
 //#include <CoreFoundation/CoreFoundation.h>
-
-@interface MVPMidiPlayer : NSObject {
-
-}
-@property(readwrite) AUGraph   processingGraph;
-@property(readwrite) AudioUnit samplerUnit;
-@property(readwrite) AudioUnit ioUnit;
-
-+(id)MVPMidiPlayer;
-
--(id)init;
--(void)midiTest;
-
-@end

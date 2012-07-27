@@ -39,8 +39,17 @@
     //MGSheetMusicViewController *viewController = [[MGSheetMusicViewController alloc]initWithMGScore:nil];
     //[self.window addSubview:viewController.sheetMusicView];
     
+    
+    //Test code
     MVPMidiPlayer *midiPlayer = [[MVPMidiPlayer alloc]init];
-    [midiPlayer midiTest];
+    [midiPlayer originalCode];
+    
+    NSString *midiFilePath = [[NSBundle mainBundle]
+                              pathForResource:@"simpletest"
+                              ofType:@"mid"];
+    NSURL * midiFileURL = [NSURL fileURLWithPath:midiFilePath];
+    MVPMidiPlayer *midiPlayer2 = [[MVPMidiPlayer alloc]initWithMidiFile:midiFileURL];
+    [midiPlayer2 play];
     
     return YES;
 }
