@@ -20,13 +20,17 @@
 
 +(id)MVPMidiPlayer;
 
+-(void)dealloc;
 -(id)init;
 
 -(id)initWithMidiFile:(NSURL *)midiFileURL;
 -(void)play;
+-(bool)isPlaying; //Returns true if instance is currently playing
 -(void)pause;//return timestamp?
 -(void)stop; 
+-(MusicSequence)getSequence; // Returns sequence being held by self.player
 
+-(void)test;
 -(void)originalCode; //the original method
 
 @end

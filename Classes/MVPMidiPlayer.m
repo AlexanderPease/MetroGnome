@@ -25,14 +25,23 @@
 @synthesize ioUnit              = _ioUnit;
 @synthesize player              = _player;
 
+/*******************************************************************************/
 
-+(id)MVPMidiPlayer {
-    return [[self alloc] init];
+// Releases MusicSequence, MusicPlayer, and self
+-(void)dealloc {
+    // Dispose of sequence
+    MusicSequence s;
+    NewMusicSequence(&s);
+    MusicPlayerGetSequence(self.player, &s);
+    DisposeMusicSequence(s);
+    
+    // Dispose of player
+    MusicPlayerStop(self.player);
+    DisposeMusicPlayer(self.player);
+    [super dealloc];
 }
 
-
-//-(void)dealloc
-
+// Generic init method
 -(id)init {
 	if((self = [super init] )) {
 
@@ -293,27 +302,6 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
         // Called to do some MusicPlayer setup. This just 
         // reduces latency when MusicPlayerStart is called
         MusicPlayerPreroll(self.player);
-        
-        // Get length of track so that we know how long to kill time for
-        MusicTrack t;
-        MusicTimeStamp len;
-        UInt32 sz = sizeof(MusicTimeStamp);
-        MusicSequenceGetIndTrack(sequence, 1, &t);
-        MusicTrackGetProperty(t, kSequenceTrackProperty_TrackLength, &len, &sz);
-        
-        
-        /*while (1) { // kill time until the music is over
-            usleep (3 * 1000 * 1000); //suspend thread execution, measured in microseconds
-            MusicTimeStamp now = 0;
-            MusicPlayerGetTime (self.player, &now);
-            if (now >= len)
-                break;
-        }
-        */
-        // Stop the player and dispose of the objects
-        //MusicPlayerStop(self.player);
-        //DisposeMusicSequence(sequence);
-        //DisposeMusicPlayer(self.player);
         }
     return self;
 }
@@ -324,15 +312,99 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
     MusicPlayerStart(self.player);
 }
 
+//Returns true if instance is currently playing
+-(bool)isPlaying {
+    Boolean *b;
+    MusicPlayerIsPlaying(self.player, b);
+    return (bool) b;
+}
+
 -(void)pause {
+    // Get length of track so that we know how long to kill time for
+    //MusicTrack t;
+    //MusicTimeStamp len;
+    //UInt32 sz = sizeof(MusicTimeStamp);
+    //MusicSequenceGetIndTrack(sequence, 1, &t);
+    //MusicTrackGetProperty(t, kSequenceTrackProperty_TrackLength, &len, &sz);
     
+    
+    /*while (1) { // kill time until the music is over
+     usleep (3 * 1000 * 1000); //suspend thread execution, measured in microseconds
+     MusicTimeStamp now = 0;
+     MusicPlayerGetTime (self.player, &now);
+     if (now >= len)
+     break;
+     }
+     */
 }
 
 -(void)stop {
+    MusicPlayerStop(self.player);
+}
+
+// Returns sequence being held by self.player
+-(MusicSequence)getSequence {
+    MusicSequence s;
+    NewMusicSequence(&s);
+    MusicPlayerGetSequence(self.player, &s);
+    DisposeMusicSequence(s);
+    MusicPlayerGetSequence(self.player, &s);   
+    return s;
+}
+
+
+#pragma mark -
+#pragma mark Testing code
+/******************************************************************************/
+//Test the MVPMidiPlayer class and all methods
++(void)test {
+    NSLog(@"Entered MVPMidiPlayer testing function");
     
+    MVPMidiPlayer *testPlayer = [[MVPMidiPlayer alloc]init];
+    [testPlayer dealloc];
+    
+    
+    NSString *midiFilePath = [[NSBundle mainBundle]
+                              pathForResource:@"simpletest"
+                              ofType:@"mid"];
+    NSURL * midiFileURL = [NSURL fileURLWithPath:midiFilePath];
+    MVPMidiPlayer *testPlayer2 = [[MVPMidiPlayer alloc]initWithMidiFile:midiFileURL];
+    [testPlayer2 play];
+    
+    bool b = [testPlayer2 isPlaying];
+    if (!b) {
+        NSLog(@"isPlaying method failed");
+    }
+    
+    MusicSequence s = [testPlayer2 getSequence];
+    if (!s) {
+        NSLog(@"getSequence method failed. Returned null sequence");
+    }
+    
+    // Get length of track so that we know how long to kill time for
+    MusicTrack t;
+    MusicTimeStamp len;
+    UInt32 sz = sizeof(MusicTimeStamp);
+    MusicSequenceGetIndTrack(s, 1, &t);
+    MusicTrackGetProperty(t, kSequenceTrackProperty_TrackLength, &len, &sz);
+    
+    
+    while (1) { // kill time until the music is over
+        usleep (3 * 1000 * 1000); //suspend thread execution, measured in microseconds
+        MusicTimeStamp now = 0;
+        MusicPlayerGetTime (testPlayer2.player, &now);
+        if (now >= len)
+            break;
+    }
+
+    
+    
+    
+    NSLog(@"Exited MVPMidiPlayer testing function");
 }
 /******************************************************************************/
-
+#pragma mark -
+#pragma mark Original code
 -(void)originalCode {
 	
     OSStatus result = noErr;
