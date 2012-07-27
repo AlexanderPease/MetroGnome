@@ -293,8 +293,6 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
         // Called to do some MusicPlayer setup. This just 
         // reduces latency when MusicPlayerStart is called
         MusicPlayerPreroll(self.player);
-        // Starts the music playing
-        MusicPlayerStart(self.player);
         
         // Get length of track so that we know how long to kill time for
         MusicTrack t;
@@ -304,18 +302,18 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
         MusicTrackGetProperty(t, kSequenceTrackProperty_TrackLength, &len, &sz);
         
         
-        while (1) { // kill time until the music is over
+        /*while (1) { // kill time until the music is over
             usleep (3 * 1000 * 1000); //suspend thread execution, measured in microseconds
             MusicTimeStamp now = 0;
             MusicPlayerGetTime (self.player, &now);
             if (now >= len)
                 break;
         }
-        
+        */
         // Stop the player and dispose of the objects
-        MusicPlayerStop(self.player);
-        DisposeMusicSequence(sequence);
-        DisposeMusicPlayer(self.player);
+        //MusicPlayerStop(self.player);
+        //DisposeMusicSequence(sequence);
+        //DisposeMusicPlayer(self.player);
         }
     return self;
 }

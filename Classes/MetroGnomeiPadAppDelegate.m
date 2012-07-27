@@ -41,8 +41,8 @@
     
     
     //Test code
-    MVPMidiPlayer *midiPlayer = [[MVPMidiPlayer alloc]init];
-    [midiPlayer originalCode];
+    //MVPMidiPlayer *midiPlayer = [[MVPMidiPlayer alloc]init];
+    //[midiPlayer originalCode];
     
     NSString *midiFilePath = [[NSBundle mainBundle]
                               pathForResource:@"simpletest"
