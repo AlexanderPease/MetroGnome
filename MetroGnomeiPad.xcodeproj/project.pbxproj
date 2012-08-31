@@ -18,23 +18,15 @@
 		C9434E5C15C1A47900E9FACA /* simpletest.mid in Resources */ = {isa = PBXBuildFile; fileRef = C9434E5A15C1A47900E9FACA /* simpletest.mid */; };
 		C9434E6B15C462FD00E9FACA /* OriginalCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9434E6A15C462FD00E9FACA /* OriginalCode.txt */; };
 		C948E92914DCF3CA00AA23F7 /* Sibelius Paper.png in Resources */ = {isa = PBXBuildFile; fileRef = C948E92814DCF3CA00AA23F7 /* Sibelius Paper.png */; };
-		C948E92D14DCFADD00AA23F7 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C948E92C14DCFADD00AA23F7 /* DemoViewController.m */; };
-		C9551E86149EFE7600836A6D /* MGSheetMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9551E85149EFE7600836A6D /* MGSheetMusicView.m */; };
-		C9551E8A149F01F300836A6D /* MGSheetMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9551E89149F01F300836A6D /* MGSheetMusicViewController.m */; };
 		C9585C1814D8FA6000DB72FE /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = C9585C1714D8FA6000DB72FE /* red.png */; };
-		C968C8DA14932103005C1FD1 /* MGSoundFont.m in Sources */ = {isa = PBXBuildFile; fileRef = C968C8D914932103005C1FD1 /* MGSoundFont.m */; };
-		C98771E214CC8C9300649C26 /* MGSingleStaffView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98771E114CC8C9300649C26 /* MGSingleStaffView.m */; };
 		C98771E514CC8EF900649C26 /* SingleStaff.png in Resources */ = {isa = PBXBuildFile; fileRef = C98771E414CC8EF900649C26 /* SingleStaff.png */; };
-		C987723014CCE1B500649C26 /* MGDoubleStaffView.m in Sources */ = {isa = PBXBuildFile; fileRef = C987722F14CCE1B500649C26 /* MGDoubleStaffView.m */; };
 		C98BDDFB14A13A4F00CB888F /* TrebleClefLogoBold.png in Resources */ = {isa = PBXBuildFile; fileRef = C98BDDFA14A13A4F00CB888F /* TrebleClefLogoBold.png */; };
 		C98BDE4C14A1A45900CB888F /* SheetMusicPaperLogoPortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = C98BDE4B14A1A45900CB888F /* SheetMusicPaperLogoPortrait.png */; };
 		C98C7E2315858B9D00F4DE88 /* XMLView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98C7E2215858B9D00F4DE88 /* XMLView.m */; };
 		C98C7E2815858C7600F4DE88 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = C98C7E2615858C7600F4DE88 /* test.txt */; };
 		C98C7E2915858C7600F4DE88 /* g.xml in Resources */ = {isa = PBXBuildFile; fileRef = C98C7E2715858C7600F4DE88 /* g.xml */; };
-		C99A0A3914D3BC8F00A71551 /* MGBarLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C99A0A3814D3BC8F00A71551 /* MGBarLineView.m */; };
 		C99A0A3C14D3BE7200A71551 /* SheetMusicPaper.png in Resources */ = {isa = PBXBuildFile; fileRef = C99A0A3B14D3BE7200A71551 /* SheetMusicPaper.png */; };
 		C99A0A3E14D3BEE800A71551 /* BarLine.png in Resources */ = {isa = PBXBuildFile; fileRef = C99A0A3D14D3BEE800A71551 /* BarLine.png */; };
-		C9A1BA8514D6041500FF5E5A /* MGOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A1BA8414D6041500FF5E5A /* MGOptions.m */; };
 		C9A1BA8714D7B73500FF5E5A /* QuarterNote.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A1BA8614D7B73500FF5E5A /* QuarterNote.png */; };
 		C9A1BA9114D7B74A00FF5E5A /* EighthNote.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A1BA8814D7B74A00FF5E5A /* EighthNote.png */; };
 		C9A1BA9214D7B74A00FF5E5A /* EndBarLine.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A1BA8914D7B74A00FF5E5A /* EndBarLine.png */; };
@@ -45,13 +37,7 @@
 		C9A1BA9714D7B74A00FF5E5A /* SixteenthNote.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A1BA8E14D7B74A00FF5E5A /* SixteenthNote.png */; };
 		C9A1BA9814D7B74A00FF5E5A /* TrebleClef.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A1BA8F14D7B74A00FF5E5A /* TrebleClef.png */; };
 		C9A1BA9914D7B74A00FF5E5A /* WholeNote.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A1BA9014D7B74A00FF5E5A /* WholeNote.png */; };
-		C9A3E5B614955C8100399DC4 /* libbass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEADEAB4142DED65000601D5 /* libbass.a */; };
-		C9A3E5B714955C8400399DC4 /* libbassmidi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEADEAB6142DED66000601D5 /* libbassmidi.a */; };
-		C9AC579514AC252700DA31CD /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC579014AC252700DA31CD /* Array.m */; };
-		C9AC579614AC252700DA31CD /* MidiFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC579214AC252700DA31CD /* MidiFile.m */; };
 		C9BDF7C5149D9DA20000D67A /* Chopin Ocean Etude.mid in Resources */ = {isa = PBXBuildFile; fileRef = C9BDF7C4149D9DA20000D67A /* Chopin Ocean Etude.mid */; };
-		C9D6329214A05E5E005A6CC1 /* MGScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D6329114A05E5E005A6CC1 /* MGScore.m */; };
-		C9D6329714A06B8B005A6CC1 /* MGHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D6329614A06B8B005A6CC1 /* MGHomeViewController.m */; };
 		C9E2F7AB14DD246600D98456 /* C Major Blues Scale.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7A914DD246600D98456 /* C Major Blues Scale.tiff */; };
 		C9E2F7AC14DD246600D98456 /* C Major Blues Scale.mid in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7AA14DD246600D98456 /* C Major Blues Scale.mid */; };
 		C9E2F7AF14DD2F2F00D98456 /* Kairos3Notes.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7AE14DD2F2F00D98456 /* Kairos3Notes.tiff */; };
@@ -60,17 +46,8 @@
 		C9E2F7B514DD77D800D98456 /* Kairos3NotesandKeys.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7B414DD77D800D98456 /* Kairos3NotesandKeys.tiff */; };
 		C9E2F7B914DD7BAC00D98456 /* Z Kairos Blues.mid in Resources */ = {isa = PBXBuildFile; fileRef = C9E2F7B814DD7BAC00D98456 /* Z Kairos Blues.mid */; };
 		C9E9D4A2158EBA0300144D92 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E9D4A1158EBA0300144D92 /* XMLReader.m */; };
-		CE0865631449751100FB2CE3 /* MGRest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0865621449751100FB2CE3 /* MGRest.m */; };
-		CE08656B14497D9B00FB2CE3 /* MGTimeSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = CE08656A14497D9B00FB2CE3 /* MGTimeSignature.m */; };
-		CE0B16461435501F003BAD47 /* MGChord.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0B16451435501F003BAD47 /* MGChord.m */; };
-		CE1B68F9144010B400DACFC1 /* MGPart.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B68F8144010B400DACFC1 /* MGPart.m */; };
-		CE1B69301440164300DACFC1 /* MGMIDIController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B692F1440164300DACFC1 /* MGMIDIController.m */; };
 		CEADEA94142DED29000601D5 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEADEA93142DED29000601D5 /* CoreMIDI.framework */; };
-		CEADEADC142DF0FB000601D5 /* MGInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADEADB142DF0FB000601D5 /* MGInstrument.m */; };
 		CEADEB4B142DF5B3000601D5 /* ChoriumRevA.SF2 in Resources */ = {isa = PBXBuildFile; fileRef = CEADEB4A142DF5B3000601D5 /* ChoriumRevA.SF2 */; };
-		CECE117F143359F00063EC3F /* MGLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE117E143359F00063EC3F /* MGLesson.m */; };
-		CECE12D01433E45C0063EC3F /* MGKeySignature.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE12CF1433E45C0063EC3F /* MGKeySignature.m */; };
-		CECE12F31433E4F80063EC3F /* MGNote.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE12F21433E4F80063EC3F /* MGNote.m */; };
 		CEF8541A142B2DEA00514F8E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF85419142B2DEA00514F8E /* AudioToolbox.framework */; };
 		CEF8541C142B2DEA00514F8E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF8541B142B2DEA00514F8E /* CFNetwork.framework */; };
 		CEF8541E142B2DEA00514F8E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF8541D142B2DEA00514F8E /* SystemConfiguration.framework */; };
@@ -93,32 +70,16 @@
 		C9434E5A15C1A47900E9FACA /* simpletest.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = simpletest.mid; sourceTree = "<group>"; };
 		C9434E6A15C462FD00E9FACA /* OriginalCode.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = OriginalCode.txt; path = MVPMidiPlayer/OriginalCode.txt; sourceTree = "<group>"; };
 		C948E92814DCF3CA00AA23F7 /* Sibelius Paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sibelius Paper.png"; path = "Resources/Sibelius Paper.png"; sourceTree = "<group>"; };
-		C948E92B14DCFADD00AA23F7 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoViewController.h; path = Controllers/DemoViewController.h; sourceTree = "<group>"; };
-		C948E92C14DCFADD00AA23F7 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoViewController.m; path = Controllers/DemoViewController.m; sourceTree = "<group>"; };
-		C9551E84149EFE7600836A6D /* MGSheetMusicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGSheetMusicView.h; path = Views/MGSheetMusicView.h; sourceTree = "<group>"; };
-		C9551E85149EFE7600836A6D /* MGSheetMusicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGSheetMusicView.m; path = Views/MGSheetMusicView.m; sourceTree = "<group>"; };
-		C9551E88149F01F300836A6D /* MGSheetMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGSheetMusicViewController.h; path = Controllers/MGSheetMusicViewController.h; sourceTree = "<group>"; };
-		C9551E89149F01F300836A6D /* MGSheetMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGSheetMusicViewController.m; path = Controllers/MGSheetMusicViewController.m; sourceTree = "<group>"; };
 		C9585C1714D8FA6000DB72FE /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red.png; path = Resources/red.png; sourceTree = "<group>"; };
-		C968C8D914932103005C1FD1 /* MGSoundFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGSoundFont.m; path = Models/SoundFonts/MGSoundFont.m; sourceTree = "<group>"; };
-		C96AFECE14D4FC46001B9F71 /* Options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Options.h; path = Vaidyanathan/Options.h; sourceTree = "<group>"; };
-		C98771E014CC8C9300649C26 /* MGSingleStaffView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGSingleStaffView.h; path = "Views/Musical Notation Views/MGSingleStaffView.h"; sourceTree = "<group>"; };
-		C98771E114CC8C9300649C26 /* MGSingleStaffView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGSingleStaffView.m; path = "Views/Musical Notation Views/MGSingleStaffView.m"; sourceTree = "<group>"; };
 		C98771E414CC8EF900649C26 /* SingleStaff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SingleStaff.png; path = Resources/SingleStaff.png; sourceTree = "<group>"; };
-		C987722E14CCE1B500649C26 /* MGDoubleStaffView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGDoubleStaffView.h; path = "Views/Musical Notation Views/MGDoubleStaffView.h"; sourceTree = "<group>"; };
-		C987722F14CCE1B500649C26 /* MGDoubleStaffView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGDoubleStaffView.m; path = "Views/Musical Notation Views/MGDoubleStaffView.m"; sourceTree = "<group>"; };
 		C98BDDFA14A13A4F00CB888F /* TrebleClefLogoBold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TrebleClefLogoBold.png; path = Resources/TrebleClefLogoBold.png; sourceTree = "<group>"; };
 		C98BDE4B14A1A45900CB888F /* SheetMusicPaperLogoPortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SheetMusicPaperLogoPortrait.png; path = Resources/SheetMusicPaperLogoPortrait.png; sourceTree = "<group>"; };
 		C98C7E2115858B9D00F4DE88 /* XMLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLView.h; sourceTree = "<group>"; };
 		C98C7E2215858B9D00F4DE88 /* XMLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLView.m; sourceTree = "<group>"; };
 		C98C7E2615858C7600F4DE88 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		C98C7E2715858C7600F4DE88 /* g.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = g.xml; sourceTree = "<group>"; };
-		C99A0A3714D3BC8F00A71551 /* MGBarLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGBarLineView.h; path = "Views/Musical Notation Views/MGBarLineView.h"; sourceTree = "<group>"; };
-		C99A0A3814D3BC8F00A71551 /* MGBarLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGBarLineView.m; path = "Views/Musical Notation Views/MGBarLineView.m"; sourceTree = "<group>"; };
 		C99A0A3B14D3BE7200A71551 /* SheetMusicPaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SheetMusicPaper.png; path = Resources/SheetMusicPaper.png; sourceTree = "<group>"; };
 		C99A0A3D14D3BEE800A71551 /* BarLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarLine.png; path = Resources/BarLine.png; sourceTree = "<group>"; };
-		C9A1BA8314D6041500FF5E5A /* MGOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGOptions.h; path = Models/Options/MGOptions.h; sourceTree = "<group>"; };
-		C9A1BA8414D6041500FF5E5A /* MGOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGOptions.m; path = Models/Options/MGOptions.m; sourceTree = "<group>"; };
 		C9A1BA8614D7B73500FF5E5A /* QuarterNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = QuarterNote.png; path = Resources/QuarterNote.png; sourceTree = "<group>"; };
 		C9A1BA8814D7B74A00FF5E5A /* EighthNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EighthNote.png; path = Resources/EighthNote.png; sourceTree = "<group>"; };
 		C9A1BA8914D7B74A00FF5E5A /* EndBarLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EndBarLine.png; path = Resources/EndBarLine.png; sourceTree = "<group>"; };
@@ -129,15 +90,7 @@
 		C9A1BA8E14D7B74A00FF5E5A /* SixteenthNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SixteenthNote.png; path = Resources/SixteenthNote.png; sourceTree = "<group>"; };
 		C9A1BA8F14D7B74A00FF5E5A /* TrebleClef.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TrebleClef.png; path = Resources/TrebleClef.png; sourceTree = "<group>"; };
 		C9A1BA9014D7B74A00FF5E5A /* WholeNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WholeNote.png; path = Resources/WholeNote.png; sourceTree = "<group>"; };
-		C9AC578F14AC252700DA31CD /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = Vaidyanathan/Array.h; sourceTree = "<group>"; };
-		C9AC579014AC252700DA31CD /* Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Array.m; path = Vaidyanathan/Array.m; sourceTree = "<group>"; };
-		C9AC579114AC252700DA31CD /* MidiFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MidiFile.h; path = Vaidyanathan/MidiFile.h; sourceTree = "<group>"; };
-		C9AC579214AC252700DA31CD /* MidiFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MidiFile.m; path = Vaidyanathan/MidiFile.m; sourceTree = "<group>"; };
 		C9BDF7C4149D9DA20000D67A /* Chopin Ocean Etude.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = "Chopin Ocean Etude.mid"; path = "Resources/Chopin Ocean Etude.mid"; sourceTree = "<group>"; };
-		C9D6329014A05E5E005A6CC1 /* MGScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGScore.h; path = Models/Scores/MGScore.h; sourceTree = "<group>"; };
-		C9D6329114A05E5E005A6CC1 /* MGScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGScore.m; path = Models/Scores/MGScore.m; sourceTree = "<group>"; };
-		C9D6329514A06B8B005A6CC1 /* MGHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGHomeViewController.h; path = Controllers/HomeViewController/MGHomeViewController.h; sourceTree = "<group>"; };
-		C9D6329614A06B8B005A6CC1 /* MGHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGHomeViewController.m; path = Controllers/HomeViewController/MGHomeViewController.m; sourceTree = "<group>"; };
 		C9E2F7A914DD246600D98456 /* C Major Blues Scale.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "C Major Blues Scale.tiff"; path = "Resources/C Major Blues Scale.tiff"; sourceTree = "<group>"; };
 		C9E2F7AA14DD246600D98456 /* C Major Blues Scale.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = "C Major Blues Scale.mid"; path = "Resources/C Major Blues Scale.mid"; sourceTree = "<group>"; };
 		C9E2F7AE14DD2F2F00D98456 /* Kairos3Notes.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Kairos3Notes.tiff; path = Resources/Kairos3Notes.tiff; sourceTree = "<group>"; };
@@ -147,32 +100,9 @@
 		C9E2F7B814DD7BAC00D98456 /* Z Kairos Blues.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "Z Kairos Blues.mid"; sourceTree = "<group>"; };
 		C9E9D4A0158EBA0300144D92 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLReader.h; path = Controllers/XMLReader.h; sourceTree = "<group>"; };
 		C9E9D4A1158EBA0300144D92 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLReader.m; path = Controllers/XMLReader.m; sourceTree = "<group>"; };
-		CE0865611449751100FB2CE3 /* MGRest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGRest.h; path = Classes/Models/Note/Rests/MGRest.h; sourceTree = SOURCE_ROOT; };
-		CE0865621449751100FB2CE3 /* MGRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGRest.m; path = Classes/Models/Note/Rests/MGRest.m; sourceTree = SOURCE_ROOT; };
-		CE08656914497D9B00FB2CE3 /* MGTimeSignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGTimeSignature.h; path = "Classes/Models/Time Signature/MGTimeSignature.h"; sourceTree = SOURCE_ROOT; };
-		CE08656A14497D9B00FB2CE3 /* MGTimeSignature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGTimeSignature.m; path = "Classes/Models/Time Signature/MGTimeSignature.m"; sourceTree = SOURCE_ROOT; };
 		CE0B162814350979003BAD47 /* MIDIValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MIDIValues.h; path = "Other Sources/Constants/MIDIValues.h"; sourceTree = SOURCE_ROOT; };
-		CE0B16441435501F003BAD47 /* MGChord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGChord.h; path = Classes/Models/Chords/MGChord.h; sourceTree = SOURCE_ROOT; };
-		CE0B16451435501F003BAD47 /* MGChord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGChord.m; path = Classes/Models/Chords/MGChord.m; sourceTree = SOURCE_ROOT; };
-		CE1B68F7144010B400DACFC1 /* MGPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGPart.h; path = Classes/Models/Parts/MGPart.h; sourceTree = SOURCE_ROOT; };
-		CE1B68F8144010B400DACFC1 /* MGPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGPart.m; path = Classes/Models/Parts/MGPart.m; sourceTree = SOURCE_ROOT; };
-		CE1B692E1440164300DACFC1 /* MGMIDIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGMIDIController.h; path = Classes/Controllers/MIDIController/MGMIDIController.h; sourceTree = SOURCE_ROOT; };
-		CE1B692F1440164300DACFC1 /* MGMIDIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGMIDIController.m; path = Classes/Controllers/MIDIController/MGMIDIController.m; sourceTree = SOURCE_ROOT; };
-		CEADEA90142DED0D000601D5 /* bass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bass.h; path = BASS/bass.h; sourceTree = SOURCE_ROOT; };
-		CEADEA91142DED0D000601D5 /* bassmidi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bassmidi.h; path = BASS/bassmidi.h; sourceTree = SOURCE_ROOT; };
 		CEADEA93142DED29000601D5 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
-		CEADEAB4142DED65000601D5 /* libbass.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbass.a; path = /Users/AlexanderPease/git/MetroGnomeiPad/BASS/libbass.a; sourceTree = "<absolute>"; };
-		CEADEAB6142DED66000601D5 /* libbassmidi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbassmidi.a; path = /Users/AlexanderPease/git/MetroGnomeiPad/BASS/libbassmidi.a; sourceTree = "<absolute>"; };
-		CEADEADA142DF0FB000601D5 /* MGInstrument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGInstrument.h; path = Models/Instruments/MGInstrument.h; sourceTree = "<group>"; };
-		CEADEADB142DF0FB000601D5 /* MGInstrument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGInstrument.m; path = Models/Instruments/MGInstrument.m; sourceTree = "<group>"; };
 		CEADEB4A142DF5B3000601D5 /* ChoriumRevA.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; name = ChoriumRevA.SF2; path = SoundFonts/ChoriumRevA.SF2; sourceTree = SOURCE_ROOT; };
-		CEADEB91142E7263000601D5 /* MGSoundFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGSoundFont.h; path = Models/SoundFonts/MGSoundFont.h; sourceTree = "<group>"; };
-		CECE117D143359F00063EC3F /* MGLesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGLesson.h; path = Models/Lessons/MGLesson.h; sourceTree = "<group>"; };
-		CECE117E143359F00063EC3F /* MGLesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGLesson.m; path = Models/Lessons/MGLesson.m; sourceTree = "<group>"; };
-		CECE12CE1433E45C0063EC3F /* MGKeySignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGKeySignature.h; path = "Classes/Models/Key Signature/MGKeySignature.h"; sourceTree = SOURCE_ROOT; };
-		CECE12CF1433E45C0063EC3F /* MGKeySignature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGKeySignature.m; path = "Classes/Models/Key Signature/MGKeySignature.m"; sourceTree = SOURCE_ROOT; };
-		CECE12F11433E4F80063EC3F /* MGNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGNote.h; path = Classes/Models/Note/MGNote.h; sourceTree = SOURCE_ROOT; };
-		CECE12F21433E4F80063EC3F /* MGNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGNote.m; path = Classes/Models/Note/MGNote.m; sourceTree = SOURCE_ROOT; };
 		CEF85419142B2DEA00514F8E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CEF8541B142B2DEA00514F8E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		CEF8541D142B2DEA00514F8E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -190,8 +120,6 @@
 				CEF8541C142B2DEA00514F8E /* CFNetwork.framework in Frameworks */,
 				CEF8541E142B2DEA00514F8E /* SystemConfiguration.framework in Frameworks */,
 				CEADEA94142DED29000601D5 /* CoreMIDI.framework in Frameworks */,
-				C9A3E5B614955C8100399DC4 /* libbass.a in Frameworks */,
-				C9A3E5B714955C8400399DC4 /* libbassmidi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,15 +129,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CECE11771433587D0063EC3F /* Models */,
 				CECE1178143358860063EC3F /* Views */,
 				CECE11791433588C0063EC3F /* Controller */,
 				1D3623240D0F684500981E51 /* MetroGnomeiPadAppDelegate.h */,
 				1D3623250D0F684500981E51 /* MetroGnomeiPadAppDelegate.m */,
-				CEADEADA142DF0FB000601D5 /* MGInstrument.h */,
-				CEADEADB142DF0FB000601D5 /* MGInstrument.m */,
-				CEADEB91142E7263000601D5 /* MGSoundFont.h */,
-				C968C8D914932103005C1FD1 /* MGSoundFont.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -227,8 +150,6 @@
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
 				C9434E5415C1A43100E9FACA /* MVPMidiPlayer */,
-				C9AC578A14AC23F700DA31CD /* Vaidyanathan */,
-				CEADEA92142DED14000601D5 /* BASS */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -293,8 +214,6 @@
 				CEF8541B142B2DEA00514F8E /* CFNetwork.framework */,
 				CEF8541D142B2DEA00514F8E /* SystemConfiguration.framework */,
 				CEADEA93142DED29000601D5 /* CoreMIDI.framework */,
-				CEADEAB4142DED65000601D5 /* libbass.a */,
-				CEADEAB6142DED66000601D5 /* libbassmidi.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -311,37 +230,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		C948E92A14DCFABC00AA23F7 /* DemoViewController */ = {
-			isa = PBXGroup;
-			children = (
-				C948E92B14DCFADD00AA23F7 /* DemoViewController.h */,
-				C948E92C14DCFADD00AA23F7 /* DemoViewController.m */,
-			);
-			name = DemoViewController;
-			sourceTree = "<group>";
-		};
-		C98771E314CC8C9900649C26 /* Musical Notation */ = {
-			isa = PBXGroup;
-			children = (
-				C98771E014CC8C9300649C26 /* MGSingleStaffView.h */,
-				C98771E114CC8C9300649C26 /* MGSingleStaffView.m */,
-				C987722E14CCE1B500649C26 /* MGDoubleStaffView.h */,
-				C987722F14CCE1B500649C26 /* MGDoubleStaffView.m */,
-				C99A0A3714D3BC8F00A71551 /* MGBarLineView.h */,
-				C99A0A3814D3BC8F00A71551 /* MGBarLineView.m */,
-			);
-			name = "Musical Notation";
-			sourceTree = "<group>";
-		};
-		C987722D14CC962000649C26 /* SheetMusicViewController */ = {
-			isa = PBXGroup;
-			children = (
-				C9551E88149F01F300836A6D /* MGSheetMusicViewController.h */,
-				C9551E89149F01F300836A6D /* MGSheetMusicViewController.m */,
-			);
-			name = SheetMusicViewController;
-			sourceTree = "<group>";
-		};
 		C98C7E2515858C5E00F4DE88 /* XML Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,54 +237,6 @@
 				C98C7E2715858C7600F4DE88 /* g.xml */,
 			);
 			name = "XML Files";
-			sourceTree = "<group>";
-		};
-		C9A1BA8114D603F300FF5E5A /* Options */ = {
-			isa = PBXGroup;
-			children = (
-				C9A1BA8314D6041500FF5E5A /* MGOptions.h */,
-				C9A1BA8414D6041500FF5E5A /* MGOptions.m */,
-			);
-			name = Options;
-			sourceTree = "<group>";
-		};
-		C9AC578A14AC23F700DA31CD /* Vaidyanathan */ = {
-			isa = PBXGroup;
-			children = (
-				C9AC578F14AC252700DA31CD /* Array.h */,
-				C9AC579014AC252700DA31CD /* Array.m */,
-				C9AC579114AC252700DA31CD /* MidiFile.h */,
-				C9AC579214AC252700DA31CD /* MidiFile.m */,
-				C96AFECE14D4FC46001B9F71 /* Options.h */,
-			);
-			name = Vaidyanathan;
-			sourceTree = "<group>";
-		};
-		C9D6329314A05E6E005A6CC1 /* Scores */ = {
-			isa = PBXGroup;
-			children = (
-				C9D6329014A05E5E005A6CC1 /* MGScore.h */,
-				C9D6329114A05E5E005A6CC1 /* MGScore.m */,
-			);
-			name = Scores;
-			sourceTree = "<group>";
-		};
-		C9D6329414A06B60005A6CC1 /* HomeViewController */ = {
-			isa = PBXGroup;
-			children = (
-				C9D6329514A06B8B005A6CC1 /* MGHomeViewController.h */,
-				C9D6329614A06B8B005A6CC1 /* MGHomeViewController.m */,
-			);
-			name = HomeViewController;
-			sourceTree = "<group>";
-		};
-		C9D6329814A06B91005A6CC1 /* MIDIController */ = {
-			isa = PBXGroup;
-			children = (
-				CE1B692E1440164300DACFC1 /* MGMIDIController.h */,
-				CE1B692F1440164300DACFC1 /* MGMIDIController.m */,
-			);
-			name = MIDIController;
 			sourceTree = "<group>";
 		};
 		C9E9D49F158EB9E500144D92 /* XMLReader */ = {
@@ -408,57 +248,12 @@
 			name = XMLReader;
 			sourceTree = "<group>";
 		};
-		CE086560144974D600FB2CE3 /* Rests */ = {
-			isa = PBXGroup;
-			children = (
-				CE0865611449751100FB2CE3 /* MGRest.h */,
-				CE0865621449751100FB2CE3 /* MGRest.m */,
-			);
-			name = Rests;
-			sourceTree = "<group>";
-		};
-		CE08656814497D6700FB2CE3 /* Time Signature */ = {
-			isa = PBXGroup;
-			children = (
-				CE08656914497D9B00FB2CE3 /* MGTimeSignature.h */,
-				CE08656A14497D9B00FB2CE3 /* MGTimeSignature.m */,
-			);
-			name = "Time Signature";
-			sourceTree = "<group>";
-		};
 		CE0B162714350912003BAD47 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				CE0B162814350979003BAD47 /* MIDIValues.h */,
 			);
 			name = Constants;
-			sourceTree = "<group>";
-		};
-		CE0B164314354FFC003BAD47 /* Chords */ = {
-			isa = PBXGroup;
-			children = (
-				CE0B16441435501F003BAD47 /* MGChord.h */,
-				CE0B16451435501F003BAD47 /* MGChord.m */,
-			);
-			name = Chords;
-			sourceTree = "<group>";
-		};
-		CE1B68E71440100B00DACFC1 /* Parts */ = {
-			isa = PBXGroup;
-			children = (
-				CE1B68F7144010B400DACFC1 /* MGPart.h */,
-				CE1B68F8144010B400DACFC1 /* MGPart.m */,
-			);
-			name = Parts;
-			sourceTree = "<group>";
-		};
-		CEADEA92142DED14000601D5 /* BASS */ = {
-			isa = PBXGroup;
-			children = (
-				CEADEA90142DED0D000601D5 /* bass.h */,
-				CEADEA91142DED0D000601D5 /* bassmidi.h */,
-			);
-			name = BASS;
 			sourceTree = "<group>";
 		};
 		CEADEB49142DF5A2000601D5 /* SoundFonts */ = {
@@ -470,29 +265,11 @@
 			name = SoundFonts;
 			sourceTree = "<group>";
 		};
-		CECE11771433587D0063EC3F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C9D6329314A05E6E005A6CC1 /* Scores */,
-				CE1B68E71440100B00DACFC1 /* Parts */,
-				CE0B164314354FFC003BAD47 /* Chords */,
-				CECE12F01433E4DC0063EC3F /* Notes */,
-				CECE12CD1433E3C80063EC3F /* Key Signature */,
-				CE08656814497D6700FB2CE3 /* Time Signature */,
-				C9A1BA8114D603F300FF5E5A /* Options */,
-				CECE12CC1433E3BC0063EC3F /* Lesson */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
 		CECE1178143358860063EC3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				C98C7E2115858B9D00F4DE88 /* XMLView.h */,
 				C98C7E2215858B9D00F4DE88 /* XMLView.m */,
-				C98771E314CC8C9900649C26 /* Musical Notation */,
-				C9551E84149EFE7600836A6D /* MGSheetMusicView.h */,
-				C9551E85149EFE7600836A6D /* MGSheetMusicView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -501,40 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				C9E9D49F158EB9E500144D92 /* XMLReader */,
-				C948E92A14DCFABC00AA23F7 /* DemoViewController */,
-				C987722D14CC962000649C26 /* SheetMusicViewController */,
-				C9D6329414A06B60005A6CC1 /* HomeViewController */,
-				C9D6329814A06B91005A6CC1 /* MIDIController */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		CECE12CC1433E3BC0063EC3F /* Lesson */ = {
-			isa = PBXGroup;
-			children = (
-				CECE117D143359F00063EC3F /* MGLesson.h */,
-				CECE117E143359F00063EC3F /* MGLesson.m */,
-			);
-			name = Lesson;
-			sourceTree = "<group>";
-		};
-		CECE12CD1433E3C80063EC3F /* Key Signature */ = {
-			isa = PBXGroup;
-			children = (
-				CECE12CE1433E45C0063EC3F /* MGKeySignature.h */,
-				CECE12CF1433E45C0063EC3F /* MGKeySignature.m */,
-			);
-			name = "Key Signature";
-			sourceTree = "<group>";
-		};
-		CECE12F01433E4DC0063EC3F /* Notes */ = {
-			isa = PBXGroup;
-			children = (
-				CECE12F11433E4F80063EC3F /* MGNote.h */,
-				CECE12F21433E4F80063EC3F /* MGNote.m */,
-				CE086560144974D600FB2CE3 /* Rests */,
-			);
-			name = Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -633,27 +378,6 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* MetroGnomeiPadAppDelegate.m in Sources */,
-				CEADEADC142DF0FB000601D5 /* MGInstrument.m in Sources */,
-				CECE117F143359F00063EC3F /* MGLesson.m in Sources */,
-				CECE12D01433E45C0063EC3F /* MGKeySignature.m in Sources */,
-				CECE12F31433E4F80063EC3F /* MGNote.m in Sources */,
-				CE0B16461435501F003BAD47 /* MGChord.m in Sources */,
-				CE1B68F9144010B400DACFC1 /* MGPart.m in Sources */,
-				CE1B69301440164300DACFC1 /* MGMIDIController.m in Sources */,
-				CE0865631449751100FB2CE3 /* MGRest.m in Sources */,
-				CE08656B14497D9B00FB2CE3 /* MGTimeSignature.m in Sources */,
-				C968C8DA14932103005C1FD1 /* MGSoundFont.m in Sources */,
-				C9551E86149EFE7600836A6D /* MGSheetMusicView.m in Sources */,
-				C9551E8A149F01F300836A6D /* MGSheetMusicViewController.m in Sources */,
-				C9D6329214A05E5E005A6CC1 /* MGScore.m in Sources */,
-				C9D6329714A06B8B005A6CC1 /* MGHomeViewController.m in Sources */,
-				C9AC579514AC252700DA31CD /* Array.m in Sources */,
-				C9AC579614AC252700DA31CD /* MidiFile.m in Sources */,
-				C98771E214CC8C9300649C26 /* MGSingleStaffView.m in Sources */,
-				C987723014CCE1B500649C26 /* MGDoubleStaffView.m in Sources */,
-				C99A0A3914D3BC8F00A71551 /* MGBarLineView.m in Sources */,
-				C9A1BA8514D6041500FF5E5A /* MGOptions.m in Sources */,
-				C948E92D14DCFADD00AA23F7 /* DemoViewController.m in Sources */,
 				C98C7E2315858B9D00F4DE88 /* XMLView.m in Sources */,
 				C9E9D4A2158EBA0300144D92 /* XMLReader.m in Sources */,
 				C9434E5815C1A46700E9FACA /* MVPMidiPlayer.m in Sources */,

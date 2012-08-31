@@ -1,10 +1,10 @@
 //
 //  MVPMidiPlayer.h
-//  FirstGame
 //
-//  Created by Ben Smiley-Andrews on 15/03/2012.
+//  Original code by Ben Smiley-Andrews on 15/03/2012.
 //  http://www.deluge.co/?q=midi-driven-animation-core-audio-objective-c
-//  Copyright 2012 Deluge. All rights reserved.
+//
+//  MetroGnome implementation and wrapper by Alexander Pease on 01/09/2012
 //
 
 #import <AudioToolbox/MusicPlayer.h>
@@ -21,16 +21,32 @@
 -(void)dealloc;
 -(id)init;
 
+/* Init MVPMidiPlayer with a midi file located at midiFileURL */
 -(id)initWithMidiFile:(NSURL *)midiFileURL;
--(void)play;
--(bool)isPlaying; //Returns true if instance is currently playing
--(void)pause;//return timestamp? redudant with stop
--(void)stop; 
--(MusicSequence)getSequence; // Returns sequence being held by self.player
--(void)setMidiCallback;
 
+-(void)play;
+
+/* Returns true if instance is currently playing */
+-(bool)isPlaying; 
+
+/* Stops the player, returns timestamp of current position */
+-(MusicTimeStamp)pause; 
+
+/* Sets time position of sequence held by self.player */
+-(void)setTime:(MusicTimeStamp)timeStamp;
+
+/* Stops the player, sets timestamp to beginning of sequence */
+-(void)stop; 
+
+/* Returns sequence being held by self.player */
+-(MusicSequence)getSequence;
+
+/* Sets function for midi call back */ 
+-(void)setMidiCallback; //Incomplete
+
+
+/* Class methods */
 +(void)test;
-+(id)MVPMidiPlayer;
 
 @end
 

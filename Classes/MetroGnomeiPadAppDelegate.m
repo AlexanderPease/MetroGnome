@@ -7,9 +7,6 @@
 //
 
 #import "MetroGnomeiPadAppDelegate.h"
-#import "MGMIDIController.h"
-#import "MGSheetMusicViewController.h"
-#import "MGHomeViewController.h"
 
 @implementation MetroGnomeiPadAppDelegate
 @synthesize window;

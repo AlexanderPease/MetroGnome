@@ -241,6 +241,7 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
 #pragma mark -
 #pragma mark Public methods
 /*******************************************************************************/
+/* Init MVPMidiPlayer with a midi file located at midiFileURL */
 -(id)initWithMidiFile:(NSURL *)midiFileURL {
     if (self = [super init]) {
         OSStatus result = noErr;
@@ -302,30 +303,36 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
     MusicPlayerStart(self.player);
 }
 
-//Returns true if instance is currently playing
+/* Returns true if instance is currently playing */
 -(bool)isPlaying {
     Boolean *b;
     MusicPlayerIsPlaying(self.player, b);
     return (bool) b;
 }
 
--(void)pause {
+/* Stops the player, returns timestamp of current position */
+-(MusicTimeStamp)pause {
+    MusicTimeStamp time = 0;
     if ([self isPlaying]) {
-        MusicPlayerStop(self.player); 
+        MusicPlayerStop(self.player);
+        MusicPlayerGetTime (self.player, &time);
     }
-    else NSLog(@"MVPMediaPlayer paused while not playing");
+    else NSLog(@"MVPMidiPlayer paused while not playing");
+    return time;
 }
 
+/* Sets time position of sequence held by self.player */
+-(void)setTime:(MusicTimeStamp)timeStamp {
+    MusicPlayerSetTime(self.player, timeStamp);
+}
+
+/* Stops the player, sets timestamp to beginning of sequence */
 -(void)stop {
-    if ([self isPlaying]) {
-        [self pause];
-        MusicTimeStamp start = 0;
-        MusicPlayerSetTime(self.player, start);    
-    }
-    else NSLog(@"MVPMediaPlayer stopped while not playing");
+    [self pause];
+    [self setTime:0];
 }
 
-// Returns sequence being held by self.player
+/* Returns sequence being held by self.player */
 -(MusicSequence)getSequence {
     MusicSequence s;
     NewMusicSequence(&s);
@@ -335,17 +342,25 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
     return s;
 }
 
+/* Sets function for midi call back */ 
+-(void)setMidiCallback {
+    //incomplete
+}
+
 
 #pragma mark -
 #pragma mark Testing code
 /******************************************************************************/
-//Test the MVPMidiPlayer class and all methods
+/* Test the MVPMidiPlayer class and all methods */
 +(void)test {
     NSLog(@"Entered MVPMidiPlayer testing function");
     
-    MVPMidiPlayer *testPlayer = [[MVPMidiPlayer alloc]init];
-    [testPlayer dealloc];
-        
+    /* testPlayer1 ************************************************************/
+    MVPMidiPlayer *testPlayer1 = [[MVPMidiPlayer alloc]init];
+    [testPlayer1 dealloc];
+    
+    
+    /* testPlayer2 ************************************************************/
     NSString *midiFilePath = [[NSBundle mainBundle]
                               pathForResource:@"simpletest"
                               ofType:@"mid"];
@@ -367,7 +382,8 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
     
     // Test pause
     usleep (2 * 1000 * 1000);
-    [testPlayer2 pause];
+    MusicTimeStamp stamp = [testPlayer2 pause];
+    NSLog(@"%f", stamp);
     usleep (2 * 1000 * 1000);
     [testPlayer2 play];
     
@@ -387,9 +403,18 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
             break;
     }
 
-    [testPlayer2 stop];
-    [testPlayer2 play];
     [testPlayer2 dealloc];
+    
+    
+    /* testPlayer3 ************************************************************/
+    MVPMidiPlayer *testPlayer3 = [[MVPMidiPlayer alloc]initWithMidiFile:midiFileURL];
+    
+    // Test setTime. stamp is from testPlayer2. 
+    [testPlayer3 setTime:0];
+    [testPlayer3 play];
+    
+    [testPlayer3 dealloc];
+    
     
     NSLog(@"Exited MVPMidiPlayer testing function");
 }
