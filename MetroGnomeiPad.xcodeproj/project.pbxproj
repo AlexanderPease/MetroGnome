@@ -16,6 +16,7 @@
 		C9434E5815C1A46700E9FACA /* MVPMidiPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C9434E5715C1A46700E9FACA /* MVPMidiPlayer.m */; };
 		C9434E5B15C1A47900E9FACA /* Gorts_Filters.SF2 in Resources */ = {isa = PBXBuildFile; fileRef = C9434E5915C1A47900E9FACA /* Gorts_Filters.SF2 */; };
 		C9434E5C15C1A47900E9FACA /* simpletest.mid in Resources */ = {isa = PBXBuildFile; fileRef = C9434E5A15C1A47900E9FACA /* simpletest.mid */; };
+		C9434E6B15C462FD00E9FACA /* OriginalCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9434E6A15C462FD00E9FACA /* OriginalCode.txt */; };
 		C948E92914DCF3CA00AA23F7 /* Sibelius Paper.png in Resources */ = {isa = PBXBuildFile; fileRef = C948E92814DCF3CA00AA23F7 /* Sibelius Paper.png */; };
 		C948E92D14DCFADD00AA23F7 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C948E92C14DCFADD00AA23F7 /* DemoViewController.m */; };
 		C9551E86149EFE7600836A6D /* MGSheetMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9551E85149EFE7600836A6D /* MGSheetMusicView.m */; };
@@ -90,6 +91,7 @@
 		C9434E5715C1A46700E9FACA /* MVPMidiPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVPMidiPlayer.m; sourceTree = "<group>"; };
 		C9434E5915C1A47900E9FACA /* Gorts_Filters.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Gorts_Filters.SF2; path = Classes/Gorts_Filters.SF2; sourceTree = "<group>"; };
 		C9434E5A15C1A47900E9FACA /* simpletest.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = simpletest.mid; sourceTree = "<group>"; };
+		C9434E6A15C462FD00E9FACA /* OriginalCode.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = OriginalCode.txt; path = MVPMidiPlayer/OriginalCode.txt; sourceTree = "<group>"; };
 		C948E92814DCF3CA00AA23F7 /* Sibelius Paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sibelius Paper.png"; path = "Resources/Sibelius Paper.png"; sourceTree = "<group>"; };
 		C948E92B14DCFADD00AA23F7 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoViewController.h; path = Controllers/DemoViewController.h; sourceTree = "<group>"; };
 		C948E92C14DCFADD00AA23F7 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoViewController.m; path = Controllers/DemoViewController.m; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				C9434E5615C1A46700E9FACA /* MVPMidiPlayer.h */,
 				C9434E5715C1A46700E9FACA /* MVPMidiPlayer.m */,
 				C9434E5A15C1A47900E9FACA /* simpletest.mid */,
+				C9434E6A15C462FD00E9FACA /* OriginalCode.txt */,
 			);
 			name = MVPMidiPlayer;
 			path = Classes;
@@ -617,6 +620,7 @@
 				C98C7E2915858C7600F4DE88 /* g.xml in Resources */,
 				C9434E5B15C1A47900E9FACA /* Gorts_Filters.SF2 in Resources */,
 				C9434E5C15C1A47900E9FACA /* simpletest.mid in Resources */,
+				C9434E6B15C462FD00E9FACA /* OriginalCode.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

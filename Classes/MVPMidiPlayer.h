@@ -18,36 +18,19 @@
 @property(readwrite) AudioUnit ioUnit;
 @property(nonatomic,assign) MusicPlayer player;
 
-+(id)MVPMidiPlayer;
-
 -(void)dealloc;
 -(id)init;
 
 -(id)initWithMidiFile:(NSURL *)midiFileURL;
 -(void)play;
 -(bool)isPlaying; //Returns true if instance is currently playing
--(void)pause;//return timestamp?
+-(void)pause;//return timestamp? redudant with stop
 -(void)stop; 
 -(MusicSequence)getSequence; // Returns sequence being held by self.player
+-(void)setMidiCallback;
 
--(void)test;
--(void)originalCode; //the original method
++(void)test;
++(id)MVPMidiPlayer;
 
 @end
 
-//Extra comments from original code
-
-//#include <CoreMidi/MIDIServices.h>
-//#include <CoreMidi/MIDISetup.h>
-//#include <CoreMidi/MIDIThruConnection.h>
-//#include <CoreMidi/MIDIDriver.h>
-//#import  <CoreMIDI/CoreMIDI.h>
-
-//#import <UIKit/UIKit.h>
-//#include <AudioToolbox/AudioToolbox.h> //for AUGraph
-
-
-//#import <AVFoundation/AVFoundation.h>
-//#import <CoreAudio/CoreAudioTypes.h>
-
-//#include <CoreFoundation/CoreFoundation.h>
