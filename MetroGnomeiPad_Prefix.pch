@@ -9,3 +9,9 @@
 
 #import "MIDIValues.h"
 #import "MVPMidiPlayer.h"
+
+/* MGLessons */
+#import "MGLesson_SimonSays.h"
+
+/* MGLessonBlocks */
+#import "MGLessonBlock_MVP.h"

@@ -8,11 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-/** A linear lesson consisting of MGLessonBlock_MVPs **/
+/** A linear lesson consisting of MGLessonBlock_MVPs. **/
 @interface MGLesson_SimonSays : NSObject {
     NSArray *_lessonBlocks;
     MVPMidiPlayer *midiPlayer;
 }
 @property(nonatomic, retain) NSArray *lessonBlocks;
+
+//-(void)dealloc;
+//-(id)init;
+
+-(void)play;
+
+-(id)initLesson1;
 
 @end
