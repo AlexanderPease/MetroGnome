@@ -242,7 +242,7 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
 #pragma mark Public methods
 /*******************************************************************************/
 /* Init MVPMidiPlayer with a midi file located at midiFileURL */
--(id)initWithMidiFile:(NSURL *)midiFileURL {
+-(id)initWithMidiFileURL:(NSURL *)midiFileURL {
     if (self = [super init]) {
         OSStatus result = noErr;
         
@@ -332,7 +332,8 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
     [self setTime:0];
 }
 
-/* Returns sequence being held by self.player */
+/* Returns sequence being held by self.player 
+ Sequence is a defined in AudioToolbox, it is what is played by MusicPlayer */
 -(MusicSequence)getSequence {
     MusicSequence s;
     NewMusicSequence(&s);
@@ -365,7 +366,7 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
                               pathForResource:@"simpletest"
                               ofType:@"mid"];
     NSURL * midiFileURL = [NSURL fileURLWithPath:midiFilePath];
-    MVPMidiPlayer *testPlayer2 = [[MVPMidiPlayer alloc]initWithMidiFile:midiFileURL];
+    MVPMidiPlayer *testPlayer2 = [[MVPMidiPlayer alloc]initWithMidiFileURL:midiFileURL];
     [testPlayer2 play];
     
     // Test isPlaying
@@ -407,7 +408,7 @@ static void MyMIDIReadProc(const MIDIPacketList *pktlist,
     
     
     /* testPlayer3 ************************************************************/
-    MVPMidiPlayer *testPlayer3 = [[MVPMidiPlayer alloc]initWithMidiFile:midiFileURL];
+    MVPMidiPlayer *testPlayer3 = [[MVPMidiPlayer alloc]initWithMidiFileURL:midiFileURL];
     
     // Test setTime. stamp is from testPlayer2. 
     [testPlayer3 setTime:0];

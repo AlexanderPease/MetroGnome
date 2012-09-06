@@ -11,4 +11,6 @@
 /* Based around and uses MidiFile for underlying operations */
 @interface MGMidiReader : NSObject
 
++(void)test;
+
 @end

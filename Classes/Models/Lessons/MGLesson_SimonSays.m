@@ -32,11 +32,13 @@
     return self;
 }
 
+
+//NEED TO CHANGE PARADIGM: PLAY A SINGLE FILE
 -(void)play {
     MVPMidiPlayer *player = [MVPMidiPlayer alloc];
     for (int i = 0; i < [self.lessonBlocks count]; i++) {
         MGLessonBlock_MVP *lessonBlock = [self.lessonBlocks objectAtIndex:i];
-        [player initWithMidiFile:lessonBlock.midiFileURL];
+        [player initWithMidiFileURL:lessonBlock.midiFileURL];
         [player play];
         
         MusicTimeStamp len;
@@ -48,7 +50,12 @@
                 break;
         }
     }
-    
+}
+
+/* Test the class */
++(void)test {
+    MGLesson_SimonSays *lesson1 = [[MGLesson_SimonSays alloc]initLesson1];
+    [lesson1 play];
 }
 
 @end

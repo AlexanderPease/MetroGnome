@@ -78,8 +78,8 @@ typedef struct _SheetMusicOptions SheetMusicOptions;
     u_char  controlNum;    /** The controller number */
     u_char  controlValue;  /** The controller value */
     u_short pitchBend;     /** The pitch bend value */
-    u_char  numerator;     /** The numerator, for MGTimeSignature meta events */
-    u_char  denominator;   /** The denominator, for MGTimeSignature meta events */
+    u_char  numerator;     /** The numerator, for TimeSignature meta events */
+    u_char  denominator;   /** The denominator, for TimeSignature meta events */
     int     tempo;         /** The tempo, for Tempo meta events */
     u_char  metaevent;     /** The metaevent, used if eventflag is MetaEvent */
     int     metalength;    /** The metaevent length  */
@@ -210,8 +210,11 @@ int sortbytime(void* note1, void* note2);
     BOOL trackPerChannel;    /** True if we've split each channel into a track */
 }
 
+/* Added by Alexander Pease */
 -(Array*)events;
+-(NSString*)writeTemporaryMidi; /** Returns filepath of new Midi file. Naming convention is random. */
 
+/* Original methods */
 -(id)initWithFile:(NSString*)path;
 -(Array*)readTrack:(MidiFileReader*)file;
 -(Array*)tracks;
@@ -224,6 +227,7 @@ int sortbytime(void* note1, void* note2);
 -(BOOL)changeSoundPerChannel:(MidiSoundOptions *)options toFile:(NSString*)filename;
 -(Array*)changeSheetMusicOptions:(SheetMusicOptions*)options;
 
+/* Class methods */
 +(void)findHighLowNotes:(Array*)notes withMeasure:(int)measurelen startIndex:(int)startindex
                         fromStart:(int)starttime toEnd:(int)endtime withHigh:(int*)high
                         andLow:(int*)low;

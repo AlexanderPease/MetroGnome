@@ -22,7 +22,7 @@
 -(id)init;
 
 /* Init MVPMidiPlayer with a midi file located at midiFileURL */
--(id)initWithMidiFile:(NSURL *)midiFileURL;
+-(id)initWithMidiFileURL:(NSURL *)midiFileURL;
 
 -(void)play;
 
@@ -38,7 +38,8 @@
 /* Stops the player, sets timestamp to beginning of sequence */
 -(void)stop; 
 
-/* Returns sequence being held by self.player */
+/* Returns sequence being held by self.player 
+ Sequence is a defined in AudioToolbox, it is what is played by MusicPlayer */
 -(MusicSequence)getSequence;
 
 /* Sets function for midi call back */ 

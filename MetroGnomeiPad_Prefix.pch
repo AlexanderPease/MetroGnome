@@ -9,6 +9,7 @@
 
 #import "MIDIValues.h"
 #import "MVPMidiPlayer.h"
+#import "MGMidiReader.h"
 
 /* MGLessons */
 #import "MGLesson_SimonSays.h"

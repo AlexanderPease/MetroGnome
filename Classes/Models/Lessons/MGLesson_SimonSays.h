@@ -22,4 +22,6 @@
 
 -(id)initLesson1;
 
++(void)test;
+
 @end

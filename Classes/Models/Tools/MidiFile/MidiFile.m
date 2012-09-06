@@ -847,10 +847,30 @@ int sortbytime(void* v1, void* v2) {
 
 @implementation MidiFile
 
-/*Z*/
+/* Return events array */
 -(Array*)events {
     return events;
 }
+
+/** Returns filepath of new Midi file. Naming convention is random. */
+-(NSString*)writeTemporaryMidi {
+    //A simpler method is used to find Documents directory in MGMidiReader test method
+    NSArray *myPathList =  NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *myPath    =  [myPathList  objectAtIndex:0];
+    
+    //Generate unused file name
+    BOOL success = false;
+    while (!success) {
+        int random = arc4random();
+        NSString *fileName = [NSString stringWithFormat:@"%d.mid", random];
+        myPath = [myPath stringByAppendingPathComponent:fileName];
+        if(![[NSFileManager defaultManager] fileExistsAtPath:myPath])
+            success = true;
+    }
+    [MidiFile writeMidiFile:myPath withEvents:events andMode:trackmode andQuarter:quarternote]; //guessed the mode
+    return myPath;    
+}
+ 
 
 /** Get the list of tracks (MidiTrack) */
 - (Array*)tracks {
@@ -2292,7 +2312,7 @@ static NSArray* instrNames = NULL;
                      [tracks count], quarternote, [timesig description]];
     for (int i = 0; i < [tracks count]; i++) {
         MidiTrack *track = [tracks get:i];
-        s = [s stringByAppendingString:[track description]];
+        s = [s stringByAppendingString:[track description]]; 
     }
     return s;
 }

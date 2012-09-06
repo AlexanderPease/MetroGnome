@@ -24,8 +24,8 @@
     application.statusBarHidden=YES;
     
     //[MVPMidiPlayer test];
-    MGLesson_SimonSays *lesson = [[MGLesson_SimonSays alloc]initLesson1];
-    [lesson play];
+    //[MGLesson_SimonSays test];
+    [MGMidiReader test];
     
     return YES;
 }
