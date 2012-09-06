@@ -13,6 +13,9 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		C91C26BF15F92EAF00F5DE15 /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = C91C26BA15F92EAF00F5DE15 /* Array.m */; };
+		C91C26C015F92EAF00F5DE15 /* MidiFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C91C26BC15F92EAF00F5DE15 /* MidiFile.m */; };
+		C91C26C115F92EAF00F5DE15 /* TimeSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = C91C26BE15F92EAF00F5DE15 /* TimeSignature.m */; };
 		C91E180415F11F8C0028B732 /* XMLView.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E180315F11F8C0028B732 /* XMLView.m */; };
 		C91E180715F11FA10028B732 /* MVPMidiPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E180615F11FA10028B732 /* MVPMidiPlayer.m */; };
 		C91E180D15F120240028B732 /* MGLesson_SimonSays.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E180C15F120240028B732 /* MGLesson_SimonSays.m */; };
@@ -22,6 +25,7 @@
 		C91E181815F123D40028B732 /* simpletest.mid in Resources */ = {isa = PBXBuildFile; fileRef = C91E181615F123D40028B732 /* simpletest.mid */; };
 		C91E181915F123D40028B732 /* Z Kairos Blues.mid in Resources */ = {isa = PBXBuildFile; fileRef = C91E181715F123D40028B732 /* Z Kairos Blues.mid */; };
 		C91E181B15F123E20028B732 /* g.xml in Resources */ = {isa = PBXBuildFile; fileRef = C91E181A15F123E20028B732 /* g.xml */; };
+		C92F708E15F5621D00F62ABC /* MGMidiReader.m in Sources */ = {isa = PBXBuildFile; fileRef = C92F708D15F5621D00F62ABC /* MGMidiReader.m */; };
 		C9434E6B15C462FD00E9FACA /* OriginalCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9434E6A15C462FD00E9FACA /* OriginalCode.txt */; };
 		C99EEF6815F50D9500151BCB /* 44QuarterNote.mid in Resources */ = {isa = PBXBuildFile; fileRef = C99EEF6715F50D9500151BCB /* 44QuarterNote.mid */; };
 		C9E9D4A2158EBA0300144D92 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E9D4A1158EBA0300144D92 /* XMLReader.m */; };
@@ -42,6 +46,12 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* MetroGnomeiPad_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetroGnomeiPad_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* MetroGnomeiPad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MetroGnomeiPad-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C91C26B915F92EAF00F5DE15 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = Models/Tools/MidiFile/Array.h; sourceTree = "<group>"; };
+		C91C26BA15F92EAF00F5DE15 /* Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Array.m; path = Models/Tools/MidiFile/Array.m; sourceTree = "<group>"; };
+		C91C26BB15F92EAF00F5DE15 /* MidiFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MidiFile.h; path = Models/Tools/MidiFile/MidiFile.h; sourceTree = "<group>"; };
+		C91C26BC15F92EAF00F5DE15 /* MidiFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MidiFile.m; path = Models/Tools/MidiFile/MidiFile.m; sourceTree = "<group>"; };
+		C91C26BD15F92EAF00F5DE15 /* TimeSignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeSignature.h; path = Models/Tools/MidiFile/TimeSignature.h; sourceTree = "<group>"; };
+		C91C26BE15F92EAF00F5DE15 /* TimeSignature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeSignature.m; path = Models/Tools/MidiFile/TimeSignature.m; sourceTree = "<group>"; };
 		C91E180215F11F8C0028B732 /* XMLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLView.h; path = Views/XMLView.h; sourceTree = "<group>"; };
 		C91E180315F11F8C0028B732 /* XMLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLView.m; path = Views/XMLView.m; sourceTree = "<group>"; };
 		C91E180515F11FA10028B732 /* MVPMidiPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MVPMidiPlayer.h; path = MVPMidiPlayer/MVPMidiPlayer.h; sourceTree = "<group>"; };
@@ -55,6 +65,8 @@
 		C91E181615F123D40028B732 /* simpletest.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = simpletest.mid; path = "Resources/MIDI Files/simpletest.mid"; sourceTree = "<group>"; };
 		C91E181715F123D40028B732 /* Z Kairos Blues.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = "Z Kairos Blues.mid"; path = "Resources/MIDI Files/Z Kairos Blues.mid"; sourceTree = "<group>"; };
 		C91E181A15F123E20028B732 /* g.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = g.xml; path = "Resources/XML Files/g.xml"; sourceTree = "<group>"; };
+		C92F708C15F5621D00F62ABC /* MGMidiReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGMidiReader.h; path = Models/Tools/MGMidiReader.h; sourceTree = "<group>"; };
+		C92F708D15F5621D00F62ABC /* MGMidiReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGMidiReader.m; path = Models/Tools/MGMidiReader.m; sourceTree = "<group>"; };
 		C9434E6A15C462FD00E9FACA /* OriginalCode.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = OriginalCode.txt; path = MVPMidiPlayer/OriginalCode.txt; sourceTree = "<group>"; };
 		C99EEF6715F50D9500151BCB /* 44QuarterNote.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = 44QuarterNote.mid; sourceTree = "<group>"; };
 		C9E9D4A0158EBA0300144D92 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLReader.h; path = Controllers/XMLReader.h; sourceTree = "<group>"; };
@@ -194,8 +206,24 @@
 		C91E182015F142FC0028B732 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C92F708C15F5621D00F62ABC /* MGMidiReader.h */,
+				C92F708D15F5621D00F62ABC /* MGMidiReader.m */,
+				C92F886815F92CC200BFE919 /* MidiFile */,
 			);
 			name = Tools;
+			sourceTree = "<group>";
+		};
+		C92F886815F92CC200BFE919 /* MidiFile */ = {
+			isa = PBXGroup;
+			children = (
+				C91C26B915F92EAF00F5DE15 /* Array.h */,
+				C91C26BA15F92EAF00F5DE15 /* Array.m */,
+				C91C26BB15F92EAF00F5DE15 /* MidiFile.h */,
+				C91C26BC15F92EAF00F5DE15 /* MidiFile.m */,
+				C91C26BD15F92EAF00F5DE15 /* TimeSignature.h */,
+				C91C26BE15F92EAF00F5DE15 /* TimeSignature.m */,
+			);
+			name = MidiFile;
 			sourceTree = "<group>";
 		};
 		C9434E5415C1A43100E9FACA /* MVPMidiPlayer */ = {
@@ -337,6 +365,10 @@
 				C91E180715F11FA10028B732 /* MVPMidiPlayer.m in Sources */,
 				C91E180D15F120240028B732 /* MGLesson_SimonSays.m in Sources */,
 				C91E181015F120540028B732 /* MGLessonBlock_MVP.m in Sources */,
+				C92F708E15F5621D00F62ABC /* MGMidiReader.m in Sources */,
+				C91C26BF15F92EAF00F5DE15 /* Array.m in Sources */,
+				C91C26C015F92EAF00F5DE15 /* MidiFile.m in Sources */,
+				C91C26C115F92EAF00F5DE15 /* TimeSignature.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

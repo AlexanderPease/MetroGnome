@@ -25,7 +25,9 @@
                                      initWithMidiName:@"simpletest"];
         
         
-        self.lessonBlocks = [[NSArray alloc] initWithObjects:block1, block2, nil];
+        self.lessonBlocks = [[NSArray alloc] initWithObjects:block1, block1, block1, nil];
+        
+        //Put all into a single midi file
     }
     return self;
 }
@@ -35,9 +37,18 @@
     for (int i = 0; i < [self.lessonBlocks count]; i++) {
         MGLessonBlock_MVP *lessonBlock = [self.lessonBlocks objectAtIndex:i];
         [player initWithMidiFile:lessonBlock.midiFileURL];
+        [player play];
         
+        MusicTimeStamp len;
+        while (1) { // kill time until the music is over
+            usleep (2 * 1000 * 1000); // suspend thread execution, measured in microseconds
+            MusicTimeStamp now = 0;
+            MusicPlayerGetTime (player.player, &now);
+            if (now >= len)
+                break;
+        }
     }
-    [player play];  
+    
 }
 
 @end

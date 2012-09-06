@@ -22,22 +22,10 @@
     
     //Rotate to landscape mode
     application.statusBarHidden=YES;
-    //[application setStatusBarOrientation:UIInterfaceOrientationLandscapeRight animated:NO];  
     
-    //MidiController is purely a test class
-    //MGMIDIController *controller = [[MGMIDIController alloc]init];
-    //[controller test];  //TEST
-    //[self.window addSubview:controller.view];
-    //[controller release];
-    
-    //MGHomeViewController *homeViewController = [[MGHomeViewController alloc] init];
-    //[self.window addSubview:homeViewController.view];
-    
-    //MGSheetMusicViewController *viewController = [[MGSheetMusicViewController alloc]initWithMGScore:nil];
-    //[self.window addSubview:viewController.sheetMusicView];
-    
-    
-    [MVPMidiPlayer test];
+    //[MVPMidiPlayer test];
+    MGLesson_SimonSays *lesson = [[MGLesson_SimonSays alloc]initLesson1];
+    [lesson play];
     
     return YES;
 }
