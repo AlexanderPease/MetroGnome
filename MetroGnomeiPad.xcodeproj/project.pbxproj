@@ -19,7 +19,7 @@
 		C91E180415F11F8C0028B732 /* XMLView.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E180315F11F8C0028B732 /* XMLView.m */; };
 		C91E180715F11FA10028B732 /* MVPMidiPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E180615F11FA10028B732 /* MVPMidiPlayer.m */; };
 		C91E180D15F120240028B732 /* MGLesson_SimonSays.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E180C15F120240028B732 /* MGLesson_SimonSays.m */; };
-		C91E181015F120540028B732 /* MGLessonBlock_MVP.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E180F15F120540028B732 /* MGLessonBlock_MVP.m */; };
+		C91E181015F120540028B732 /* MGLessonBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E180F15F120540028B732 /* MGLessonBlock.m */; };
 		C91E181315F123810028B732 /* ChoriumRevA.SF2 in Resources */ = {isa = PBXBuildFile; fileRef = C91E181115F123810028B732 /* ChoriumRevA.SF2 */; };
 		C91E181415F123810028B732 /* Gorts_Filters.SF2 in Resources */ = {isa = PBXBuildFile; fileRef = C91E181215F123810028B732 /* Gorts_Filters.SF2 */; };
 		C91E181815F123D40028B732 /* simpletest.mid in Resources */ = {isa = PBXBuildFile; fileRef = C91E181615F123D40028B732 /* simpletest.mid */; };
@@ -27,6 +27,7 @@
 		C91E181B15F123E20028B732 /* g.xml in Resources */ = {isa = PBXBuildFile; fileRef = C91E181A15F123E20028B732 /* g.xml */; };
 		C92F708E15F5621D00F62ABC /* MGMidiReader.m in Sources */ = {isa = PBXBuildFile; fileRef = C92F708D15F5621D00F62ABC /* MGMidiReader.m */; };
 		C9434E6B15C462FD00E9FACA /* OriginalCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9434E6A15C462FD00E9FACA /* OriginalCode.txt */; };
+		C98B843816309BEA009BD0CF /* MGFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C98B843716309BEA009BD0CF /* MGFileManager.m */; };
 		C99EEF6815F50D9500151BCB /* 44QuarterNote.mid in Resources */ = {isa = PBXBuildFile; fileRef = C99EEF6715F50D9500151BCB /* 44QuarterNote.mid */; };
 		C9E9D4A2158EBA0300144D92 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E9D4A1158EBA0300144D92 /* XMLReader.m */; };
 		CEADEA94142DED29000601D5 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEADEA93142DED29000601D5 /* CoreMIDI.framework */; };
@@ -58,8 +59,8 @@
 		C91E180615F11FA10028B732 /* MVPMidiPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MVPMidiPlayer.m; path = MVPMidiPlayer/MVPMidiPlayer.m; sourceTree = "<group>"; };
 		C91E180B15F120240028B732 /* MGLesson_SimonSays.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGLesson_SimonSays.h; path = Models/Lessons/MGLesson_SimonSays.h; sourceTree = "<group>"; };
 		C91E180C15F120240028B732 /* MGLesson_SimonSays.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGLesson_SimonSays.m; path = Models/Lessons/MGLesson_SimonSays.m; sourceTree = "<group>"; };
-		C91E180E15F120540028B732 /* MGLessonBlock_MVP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGLessonBlock_MVP.h; path = "Models/Lesson Blocks/MGLessonBlock_MVP.h"; sourceTree = "<group>"; };
-		C91E180F15F120540028B732 /* MGLessonBlock_MVP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGLessonBlock_MVP.m; path = "Models/Lesson Blocks/MGLessonBlock_MVP.m"; sourceTree = "<group>"; };
+		C91E180E15F120540028B732 /* MGLessonBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; name = MGLessonBlock.h; path = "Models/Lesson Blocks/MGLessonBlock.h"; sourceTree = "<group>"; };
+		C91E180F15F120540028B732 /* MGLessonBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGLessonBlock.m; path = "Models/Lesson Blocks/MGLessonBlock.m"; sourceTree = "<group>"; };
 		C91E181115F123810028B732 /* ChoriumRevA.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; name = ChoriumRevA.SF2; path = Resources/SoundFonts/ChoriumRevA.SF2; sourceTree = "<group>"; };
 		C91E181215F123810028B732 /* Gorts_Filters.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Gorts_Filters.SF2; path = Resources/SoundFonts/Gorts_Filters.SF2; sourceTree = "<group>"; };
 		C91E181615F123D40028B732 /* simpletest.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = simpletest.mid; path = "Resources/MIDI Files/simpletest.mid"; sourceTree = "<group>"; };
@@ -68,6 +69,8 @@
 		C92F708C15F5621D00F62ABC /* MGMidiReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGMidiReader.h; path = Models/Tools/MGMidiReader.h; sourceTree = "<group>"; };
 		C92F708D15F5621D00F62ABC /* MGMidiReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGMidiReader.m; path = Models/Tools/MGMidiReader.m; sourceTree = "<group>"; };
 		C9434E6A15C462FD00E9FACA /* OriginalCode.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = OriginalCode.txt; path = MVPMidiPlayer/OriginalCode.txt; sourceTree = "<group>"; };
+		C98B843616309BEA009BD0CF /* MGFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGFileManager.h; path = Models/Tools/MGFileManager.h; sourceTree = "<group>"; };
+		C98B843716309BEA009BD0CF /* MGFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGFileManager.m; path = Models/Tools/MGFileManager.m; sourceTree = "<group>"; };
 		C99EEF6715F50D9500151BCB /* 44QuarterNote.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = 44QuarterNote.mid; sourceTree = "<group>"; };
 		C9E9D4A0158EBA0300144D92 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLReader.h; path = Controllers/XMLReader.h; sourceTree = "<group>"; };
 		C9E9D4A1158EBA0300144D92 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLReader.m; path = Controllers/XMLReader.m; sourceTree = "<group>"; };
@@ -187,8 +190,8 @@
 		C91E17FE15F11E7D0028B732 /* Lesson Blocks */ = {
 			isa = PBXGroup;
 			children = (
-				C91E180E15F120540028B732 /* MGLessonBlock_MVP.h */,
-				C91E180F15F120540028B732 /* MGLessonBlock_MVP.m */,
+				C91E180E15F120540028B732 /* MGLessonBlock.h */,
+				C91E180F15F120540028B732 /* MGLessonBlock.m */,
 			);
 			name = "Lesson Blocks";
 			sourceTree = "<group>";
@@ -208,6 +211,8 @@
 			children = (
 				C92F708C15F5621D00F62ABC /* MGMidiReader.h */,
 				C92F708D15F5621D00F62ABC /* MGMidiReader.m */,
+				C98B843616309BEA009BD0CF /* MGFileManager.h */,
+				C98B843716309BEA009BD0CF /* MGFileManager.m */,
 				C92F886815F92CC200BFE919 /* MidiFile */,
 			);
 			name = Tools;
@@ -364,11 +369,12 @@
 				C91E180415F11F8C0028B732 /* XMLView.m in Sources */,
 				C91E180715F11FA10028B732 /* MVPMidiPlayer.m in Sources */,
 				C91E180D15F120240028B732 /* MGLesson_SimonSays.m in Sources */,
-				C91E181015F120540028B732 /* MGLessonBlock_MVP.m in Sources */,
+				C91E181015F120540028B732 /* MGLessonBlock.m in Sources */,
 				C92F708E15F5621D00F62ABC /* MGMidiReader.m in Sources */,
 				C91C26BF15F92EAF00F5DE15 /* Array.m in Sources */,
 				C91C26C015F92EAF00F5DE15 /* MidiFile.m in Sources */,
 				C91C26C115F92EAF00F5DE15 /* TimeSignature.m in Sources */,
+				C98B843816309BEA009BD0CF /* MGFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

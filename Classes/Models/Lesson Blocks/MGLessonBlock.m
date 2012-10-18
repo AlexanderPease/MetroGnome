@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Princeton University. All rights reserved.
 //
 
-#import "MGLessonBlock_MVP.h"
+#import "MGLessonBlock.h"
 
-@implementation MGLessonBlock_MVP
+@implementation MGLessonBlock
 @synthesize midiFileURL = _midiFileURL;
 @synthesize xmlFileURL  = _xmlFileURL;
 

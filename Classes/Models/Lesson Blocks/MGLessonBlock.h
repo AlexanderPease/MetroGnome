@@ -11,7 +11,7 @@
 /** A simple lesson block that holds pointers to a MIDI file and an XML file.
  There is no interplay between the two; the block plays the midi file and 
  displays the xml file */
-@interface MGLessonBlock_MVP : NSObject {
+@interface MGLessonBlock : NSObject {
     NSURL *_midiFileURL;
     NSURL *_xmlFileURL;
     

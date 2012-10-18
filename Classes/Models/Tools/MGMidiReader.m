@@ -14,7 +14,7 @@
 
 +(void)test {
     
-    /* Original code from main() in MidiFile.h */
+    /* Modified the original code from main() in MidiFile.h */
     //NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     NSString *name = [[NSString alloc]initWithFormat:@"simpletest"];
     NSString *midiFilePath = [[NSBundle mainBundle]
@@ -32,23 +32,6 @@
     NSString *temporaryPath = [f writeTemporaryMidi];
     NSLog(@"temporaryPath: %@",temporaryPath);
     MVPMidiPlayer *player2 = [[MVPMidiPlayer alloc]initWithMidiFileURL:[NSURL fileURLWithPath:temporaryPath]];
-    //[player2 play];
-    
-    
-    /* Ensure temporary files can be deleted */
-    // For error information
-    NSError *error;
-    
-    // Create file manager
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
-    
-    // Point to Document directory
-    NSString *documentsDirectory = [NSHomeDirectory() 
-                                    stringByAppendingPathComponent:@"Documents"];
-    // Show contents of Documents directory
-    NSLog(@"Documents directory: %@",
-          [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&error]);
-    
-     [fileMgr ]
+    [player2 play];
 }
 @end
