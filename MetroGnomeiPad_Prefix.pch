@@ -11,8 +11,9 @@
 #import "MVPMidiPlayer.h"
 #import "MGMidiReader.h"
 
+/* MGLessonBlocks */
+#import "MGLessonBlock.h"
+
 /* MGLessons */
 #import "MGLesson_SimonSays.h"
 
-/* MGLessonBlocks */
-#import "MGLessonBlock.h"

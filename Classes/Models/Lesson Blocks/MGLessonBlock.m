@@ -7,24 +7,44 @@
 //
 
 #import "MGLessonBlock.h"
+#import "MidiFile.h"
 
 @implementation MGLessonBlock
-@synthesize midiFileURL = _midiFileURL;
-@synthesize xmlFileURL  = _xmlFileURL;
+@synthesize midiFilePath = _midiFilePath;
+@synthesize xmlFilePath  = _xmlFilePath;
 
 -(void)dealloc {
-    self.midiFileURL = nil;
+    self.midiFilePath = nil;
     [super dealloc];
 }
 
 /* Inits the lesson block with just a MIDI file */
 -(id)initWithMidiName:(NSString *)name {
     if (self = [super init]) {
-        NSString *midiFilePath = [[NSBundle mainBundle]
+        self.midiFilePath = [[NSBundle mainBundle]
                                   pathForResource:name
                                   ofType:@"mid"];
-        self.midiFileURL = [NSURL fileURLWithPath:midiFilePath];
 	}
 	return self;
 }
+
+
+/* Takes array of MGLessonBlocks and concatenates into a single MGLessonBlock */
++(MGLessonBlock *)combineLessonBlocks:(NSArray *)array {
+    
+    /* Extract all event arrays and concatenate */
+    for (int i = 0; i < [array count]; i++) {
+        MidiFile *midiFile = [[MidiFile alloc] initWithFile:[array objectAtIndex:i]];
+        Array *eventArray = [midiFile events];
+        
+        
+        
+        //NSLog(@"%@", [array get:i]);
+    }
+
+    
+    return [array objectAtIndex:1];
+    
+}
+
 @end

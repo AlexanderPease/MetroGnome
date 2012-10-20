@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-/** A linear lesson consisting of MGLessonBlock_MVPs. **/
+/** A dynamic, linear lesson consisting of MGLessonBlocks. These blocks are loaded into
+ the temporary lessonBlock such that their is only one midi file to play and
+ a single xml file to display. Which MGLessonBlocks are loaded are a function
+ of each lesson method. **/
 @interface MGLesson_SimonSays : NSObject {
-    NSArray *_lessonBlocks;
+    MGLessonBlock *_lessonBlock; 
     MVPMidiPlayer *midiPlayer;
 }
-@property(nonatomic, retain) NSArray *lessonBlocks;
+@property(nonatomic, retain) MGLessonBlock *lessonBlock;
 
 //-(void)dealloc;
 //-(id)init;

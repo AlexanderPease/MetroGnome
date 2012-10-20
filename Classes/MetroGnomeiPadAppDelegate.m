@@ -24,8 +24,8 @@
     application.statusBarHidden=YES;
     
     //[MVPMidiPlayer test];
-    //[MGLesson_SimonSays test];
-    [MGMidiReader test];
+    [MGLesson_SimonSays test];
+    //[MGMidiReader test];
     
     return YES;
 }

@@ -7,35 +7,45 @@
 //
 
 #import "MGLesson_SimonSays.h"
-#define LESSON_LENGTH 1
+#define LESSON_LENGTH 2
 
 @implementation MGLesson_SimonSays
-@synthesize lessonBlocks = _lessonBlocks;
+@synthesize lessonBlock = _lessonBlock;
 
 
 /* !! I should really be stitching together multiple midi files (MGLessonBlocks) first, then playing */
 -(id)initLesson1 {
     if (self = [super init]) {
-        // Init all lesson blocks 
-        /* Future possibilities: randomize, change midi pitches before loading
-         files, variable length, etc. */
+        //self.lessonBlock = [MGLessonBlock alloc];
+        
+        /* Create array of blocks */
+        
+        /* Concatenate together*/
         MGLessonBlock *block1 = [[MGLessonBlock alloc]
                                      initWithMidiName:@"44QuarterNote"];
         MGLessonBlock *block2 = [[MGLessonBlock alloc]
                                      initWithMidiName:@"simpletest"];
+        NSArray *array = [[NSArray alloc]initWithObjects:block1, block2, nil];
         
+        //self.lessonBlock = [MGLessonBlock combineLessonBlocks:array]; 
         
-        self.lessonBlocks = [[NSArray alloc] initWithObjects:block1, block1, block1, nil];
-        
-        //Put all into a single midi file
+        self.lessonBlock = block1;
+        /* Future possibilities: randomize, change midi pitches before loading
+         files, variable length, etc. */
     }
     return self;
 }
 
 
-//NEED TO CHANGE PARADIGM: PLAY A SINGLE FILE
+
 -(void)play {
     MVPMidiPlayer *player = [MVPMidiPlayer alloc];
+    [player initWithMidiFileURL:[NSURL fileURLWithPath:self.lessonBlock.midiFilePath]];
+    [player play];
+    
+    
+    /* Old code: NEED TO CHANGE PARADIGM: PLAY A SINGLE FILE
+    /*MVPMidiPlayer *player = [MVPMidiPlayer alloc];
     for (int i = 0; i < [self.lessonBlocks count]; i++) {
         MGLessonBlock *lessonBlock = [self.lessonBlocks objectAtIndex:i];
         [player initWithMidiFileURL:lessonBlock.midiFileURL];
@@ -49,7 +59,7 @@
             if (now >= len)
                 break;
         }
-    }
+    }*/
 }
 
 /* Test the class */
