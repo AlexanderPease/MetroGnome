@@ -996,6 +996,120 @@ int sortbytime(void* v1, void* v2) {
     return self;
 }
 
+
+/******************************************************************************/
+/* Written by Zander */
+/** Parse the given Midi file, and return an instance of this MidiFile
+ * class.  After reading the midi file, this object will contain:
+ * - The raw list of midi events
+ * - The Time Signature of the song
+ * - All the tracks in the song which contain notes. 
+ * - The number, starttime, and duration of each note.
+ */
+- (id)initWithArrayOfFiles:(NSArray*)paths {
+    const char *hdr;
+    int len;
+    
+    /* Iterate for all files */
+    for (int filenum = 0; filenum < [paths count]; filenum++) {
+        MGLessonBlock *block = [paths objectAtIndex:0];
+
+        filename = [block.midiFilePath retain];
+        tracks = [Array new:5];
+        trackPerChannel = NO;
+
+        MidiFileReader *file = [[MidiFileReader alloc] initWithFile:filename];
+        hdr = [file readAscii:4];
+        if (strncmp(hdr, "MThd", 4) != 0) {
+            [file release];
+            MidiFileException *e =
+            [MidiFileException init:@"Bad MThd header" offset:0];
+            @throw e;
+        }
+        len = [file readInt];
+        if (len !=  6) {
+            [file release];
+            MidiFileException *e =
+            [MidiFileException init:@"Bad MThd len" offset:4];
+            @throw e;
+        }
+        trackmode = [file readShort];
+        int num_tracks = [file readShort];
+        quarternote = [file readShort];
+
+        events = [Array new:num_tracks];
+        for (int tracknum = 0; tracknum < num_tracks; tracknum++) {
+            Array *trackevents = [self readTrack:file];
+            MidiTrack *track = 
+            [[MidiTrack alloc] initWithEvents:trackevents andTrack:tracknum];
+            [events add:trackevents];
+            [trackevents release];
+            [track setNumber:tracknum];
+            if ([[track notes] count] > 0) {
+                [tracks add:track];
+            }
+            [track release];
+        }
+
+        /* Get the length of the song in pulses */
+        for (int tracknum = 0; tracknum < [tracks count]; tracknum++) {
+            MidiTrack *track = [tracks get:tracknum];
+            MidiNote *last = [[track notes] get:([[track notes] count] -1) ];
+            if (totalpulses < [last startTime] + [last duration]) {
+                totalpulses = [last startTime] + [last duration];
+            }
+        }
+
+        /* If we only have one track with multiple channels, then treat
+         * each channel as a separate track.
+         */
+        if ([tracks count] == 1 && [MidiFile hasMultipleChannels:[tracks get:0]]) {
+            Array *trackevents = [events get:[[tracks get:0] number] ];
+            Array* newtracks = [MidiFile splitChannels:[tracks get:0] withEvents:trackevents];
+            trackPerChannel = YES;
+            [tracks release];
+            tracks = newtracks;
+        }
+
+        [MidiFile checkStartTimes:tracks];
+
+        /* Determine the time signature */
+        int tempo = 0;
+        int numer = 0;
+        int denom = 0;
+        for (int tracknum = 0; tracknum < [events count]; tracknum++) {
+            Array *eventlist = [events get:tracknum];
+            for (int i = 0; i < [eventlist count]; i++) {
+                MidiEvent *mevent = [eventlist get:i];
+                if ([mevent metaevent] == MetaEventTempo && tempo == 0) {
+                    tempo = [mevent tempo];
+                }
+                if ([mevent metaevent] == MetaEventTimeSignature && numer == 0) {
+                    numer = [mevent numerator];
+                    denom = [mevent denominator];
+                }
+            }
+        }
+
+        if (tempo == 0) {
+            tempo = 500000; /* 500,000 microseconds = 0.05 sec */
+        }
+        if (numer == 0) {
+            numer = 4; denom = 4;
+        }
+        timesig = [[TimeSignature alloc] initWithNumerator:numer
+                                            andDenominator:denom
+                                                andQuarter:quarternote
+                                                  andTempo:tempo];
+
+
+        [file release];
+    }
+    return self;
+}
+
+/******************************************************************************/
+
 - (void)dealloc {
     [filename release];
     [tracks release];

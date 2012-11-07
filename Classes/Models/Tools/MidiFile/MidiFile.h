@@ -213,6 +213,7 @@ int sortbytime(void* note1, void* note2);
 /* Added by Alexander Pease */
 -(Array*)events;
 -(NSString*)writeTemporaryMidi; /** Returns filepath of new Midi file. Naming convention is random. */
+- (id)initWithArrayOfFiles:(NSArray*)paths /* Built off of initWithFile */
 
 /* Original methods */
 -(id)initWithFile:(NSString*)path;

@@ -19,17 +19,15 @@
         //self.lessonBlock = [MGLessonBlock alloc];
         
         /* Create array of blocks */
-        
-        /* Concatenate together*/
         MGLessonBlock *block1 = [[MGLessonBlock alloc]
-                                     initWithMidiName:@"44QuarterNote"];
+                                 initWithMidiName:@"44QuarterNote"];
         MGLessonBlock *block2 = [[MGLessonBlock alloc]
-                                     initWithMidiName:@"simpletest"];
+                                 initWithMidiName:@"simpletest"];
         NSArray *array = [[NSArray alloc]initWithObjects:block1, block2, nil];
         
-        //self.lessonBlock = [MGLessonBlock combineLessonBlocks:array]; 
+        /* Concatenate together and save */
+        self.lessonBlock = [MGLessonBlock combineLessonBlocks:array]; 
         
-        self.lessonBlock = block1;
         /* Future possibilities: randomize, change midi pitches before loading
          files, variable length, etc. */
     }
